@@ -65,7 +65,6 @@ call pathogen#infect()
 call pathogen#helptags()
 silent! call pathogen#runtime_append_all_bundles()
 
-
 "--------
 "KeyMaps
 "--------
@@ -79,7 +78,8 @@ map <silent> <D-6> :tabn 6<cr>
 map <silent> <D-7> :tabn 7<cr>
 map <silent> <D-8> :tabn 8<cr>
 map <silent> <D-9> :tabn 9<cr>
-" Insert newline without entering insert mode
+" Insert newline below cursor: press Enter
+" Insert newline before cursor: press Shift+Enter
 map <S-Enter> O<Esc>
 map <CR> o<Esc>
 " Map <ESC> to jj in Insert mode 
@@ -107,22 +107,22 @@ cnoreabbrev tAbnew tabnew
 "--------------
 "Miscellaneous
 "--------------
-set wildmenu
+set wildmenu "enable ctrl-n and ctrl-p to scroll thru matches
 set wildmode=longest,full
 set hlsearch
-set ignorecase "Ignore case when searching
+set ignorecase "ignore case when searching
 set smartcase
-set magic "Set magic on, for regular expressions
+set magic "set magic on, for regular expressions
 set pastetoggle=<F2>
 set ruler
 set number
 set undolevels=1000
-set splitbelow "Split windows at bottom
-"set splitright "Split windows on the right
+set splitbelow "split windows at bottom
+"set splitright "split windows on the right
 let mapleader = ","
+set noswapfile "disable swap
 "set clipboard=unnamed
 highlight MatchParen cterm=bold ctermfg=cyan
-set wildmenu "enable ctrl-n and ctrl-p to scroll thru matches
 " In visual mode when you press * or # to search for the current selection
 vnoremap <silent> * :call VisualSearch('f')<CR>
 vnoremap <silent> # :call VisualSearch('b')<CR>
@@ -218,9 +218,9 @@ let OmniCpp_ShowAccess = 1
 "SuperTab 
 "---------
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
-"Let SuperTab decide which completion mode to use and should play well with OmniCompletion: 
+" Let SuperTab decide which completion mode to use and should play well with OmniCompletion: 
 let g:SuperTabDefaultCompletionType = "context"
-"Close preview window on <cr>
+" Close preview window on <cr>
 let g:SuperTabCrClosePreview = 1
 
 "-------
@@ -265,11 +265,6 @@ let g:gist_clip_command = 'pbcopy'
 "Powerline
 "---------
 let g:Powerline_symbols = 'compatible' 
-
-"------------
-"Disable swap
-"------------
-set noswapfile
 
 "---------
 "NERDTree
