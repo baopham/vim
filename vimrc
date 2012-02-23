@@ -233,7 +233,9 @@ let g:tagbar_singleclick = 1
 let g:tagbar_autoshowtag = 1
 let g:tagbar_sort = 0
 
-"YankRing
+"---------
+"Yankring
+"---------
 nnoremap <silent> <F5> :YRShow<CR>
 let g:yankring_history_dir = '$HOME/.vim/bundle/yankring/'
 
