@@ -93,6 +93,20 @@ nnoremap <C-h> :silent set cursorline!<Bar>echo<CR>
 inoremap {<CR> {<CR>}<Esc>O
 inoremap [<CR> [<CR>]<Esc>O
 inoremap (<CR> (<CR>)<Esc>O
+" Switch between split windows
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-h> <C-w>h
+map <C-l> <C-w>l
+" Resize split windows
+if bufwinnr(1)
+    " Horrizonal split windows
+    nnoremap <silent> + <C-w>+<C-w>+
+    nnoremap <silent> - <C-w>-<C-w>-
+    " Vertical split windows
+    nnoremap <silent> > <C-w>><C-w>> 
+    nnoremap <silent> < <C-w><<C-w>< 
+endif
 
 "------
 "Alias 
