@@ -276,6 +276,8 @@ let g:gist_show_privates = 1
 let g:gist_private = 1
 " gist.vim will copy the gist code with option "-c".
 let g:gist_clip_command = 'pbcopy'
+" Detect filetype from filename
+let g:gist_detect_filetype = 1
 
 "---------
 "Powerline
