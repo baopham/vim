@@ -253,9 +253,9 @@ let g:ConqueTerm_ToggleKey = '<F8>'
 " Press <C-w" to leave the Conque buffer
 let g:ConqueTerm_CWInsert = 1
 
-"-----------------
-"Settings for Gist
-"-----------------
+"-----
+"Gist
+"-----
 let g:gist_show_privates = 1
 let g:gist_private = 1
 " gist.vim will copy the gist code with option "-c".
