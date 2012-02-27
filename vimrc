@@ -88,7 +88,7 @@ imap jj <ESC>
 nnoremap <silent> <Space> :silent noh<Bar>echo<CR>
 "Highlight current line
 hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
-nnoremap <C-h> :silent set cursorline!<Bar>echo<CR>
+nnoremap ,c :silent set cursorline!<Bar>echo<CR>
 " Autoclose braces
 inoremap {<CR> {<CR>}<Esc>O
 inoremap [<CR> [<CR>]<Esc>O
@@ -100,7 +100,7 @@ map <C-h> <C-w>h
 map <C-l> <C-w>l
 " Resize split windows
 if bufwinnr(1)
-    " Horrizonal split windows
+    " Horizontal split windows
     nnoremap <silent> + <C-w>+<C-w>+
     nnoremap <silent> - <C-w>-<C-w>-
     " Vertical split windows
@@ -222,7 +222,7 @@ set completeopt=longest,menuone,preview
 " insert mode
 "autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
-let OmniCpp_NamespaceSearch = 2 " search namespaces in this and included files
+let OmniCpp_NamespaceSearch = 2 " search name spaces in this and included files
 let OmniCpp_ShowPrototypeInAbbr = 1 " show function prototype (i.e. parameters) in popup window
 let OmniCpp_LocalSearchDecl = 1 " don't require special style of function opening braces
 let OmniCpp_GlobalScopeSearch = 1
@@ -256,9 +256,9 @@ let g:yankring_history_dir = '$HOME/.vim/bundle/yankring/'
 "-----------
 "ConqueTerm
 "-----------
-" Execute current file in conque window
+" Execute current file in Conque window
 let g:ConqueTerm_ExecFileKey = '<F11>'
-" Send selected text to conque
+" Send selected text to Conque
 let g:ConqueTerm_SendVisKey = '<F9>'
 nmap <F12> :ConqueTermSplit bash -l<CR>
 let g:ConqueTerm_InsertOnEnter = 1
