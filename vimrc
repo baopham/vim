@@ -2,6 +2,7 @@ syntax on
 filetype plugin indent on
 set nocompatible
 set laststatus=2
+set encoding=utf-8
 " Set vim for 256 color schemes
 set t_Co=256
 
@@ -82,13 +83,13 @@ map <silent> <D-9> :tabn 9<cr>
 " Insert newline before cursor: press Shift+Enter
 map <S-Enter> O<Esc>
 map <CR> o<Esc>
-" Map <ESC> to jj in Insert mode 
-imap jj <ESC>
+" Map <ESC> to jk in Insert mode 
+imap jk <ESC>
 " Press space to clear search highlighting and any message already displayed.
-nnoremap <silent> <Space> :silent noh<Bar>echo<CR>
+nnoremap <silent> <Space> :silent nohls<Bar>echo<CR>
 "Highlight current line
 hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
-nnoremap ,c :silent set cursorline!<Bar>echo<CR>
+nnoremap <Leader>c :silent set cursorline!<Bar>echo<CR>
 " Autoclose braces
 inoremap {<CR> {<CR>}<Esc>O
 inoremap [<CR> [<CR>]<Esc>O
@@ -228,6 +229,10 @@ let OmniCpp_LocalSearchDecl = 1 " don't require special style of function openin
 let OmniCpp_GlobalScopeSearch = 1
 let OmniCpp_ShowAccess = 1
 
+" Insert HTML/XML close tag with Option+Command+.
+autocmd FileType xml,html setlocal macmeta " required for MacVim
+autocmd FileType xml,html imap <buffer> <M-D-.> </<C-X><C-O>
+
 "---------
 "SuperTab 
 "---------
@@ -240,9 +245,7 @@ let g:SuperTabCrClosePreview = 1
 "-------
 "TagBar
 "-------
-let g:tagbar_usearrows = 0
 nmap <F8> :TagbarToggle<CR> 
-let g:tagbar_expand = 0
 let g:tagbar_singleclick = 1
 let g:tagbar_autoshowtag = 1
 let g:tagbar_sort = 0
