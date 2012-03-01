@@ -1,3 +1,8 @@
+"""""""""""""""""
+" OS:  Mac OS   "
+" GUI: MacVim   "
+"""""""""""""""""
+
 syntax on
 filetype plugin indent on
 set nocompatible
