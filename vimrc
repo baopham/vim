@@ -33,10 +33,13 @@ if has("gui_running")
 endif
 
 if exists('+autochdir')
-    set autochdir
-else
-    autocmd BufEnter * silent! lcd %:p:h:gs/ /\\ /
+    if &ft != 'gitcommit'
+        set autochdir
+    endif
+" else
+"     autocmd BufEnter * silent! lcd %:p:h:gs/ /\\ /
 endif
+
 "Disable bell
 set visualbell
 
@@ -54,21 +57,21 @@ function! ResCur()
       endif
 endfunction
 
-augroup resCur
+augroup ResCur
     autocmd!
     autocmd BufWinEnter * call ResCur()
 augroup END
 
-"---------
-"Pathogen
-"---------
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Pathogen
+""""""""""""""""""""""""""""""""""""""""""""""""""""
 call pathogen#infect() 
 call pathogen#helptags()
 silent! call pathogen#runtime_append_all_bundles()
 
-"--------
-"KeyMaps
-"--------
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => KeyMaps
+""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use numbers to pick the tab you want (like iTerm)
 map <silent> <D-1> :tabn 1<cr>
 map <silent> <D-2> :tabn 2<cr>
@@ -79,26 +82,34 @@ map <silent> <D-6> :tabn 6<cr>
 map <silent> <D-7> :tabn 7<cr>
 map <silent> <D-8> :tabn 8<cr>
 map <silent> <D-9> :tabn 9<cr>
+
 " Insert newline below cursor: press Enter
 " Insert newline before cursor: press Shift+Enter
 map <S-Enter> O<Esc>
 map <CR> o<Esc>
-" Map <ESC> to jk in Insert mode 
+
+" Map <ESC> to jk, jj in Insert mode 
 imap jk <ESC>
+imap jj <ESC>
+
 " Press space to clear search highlighting and any message already displayed.
 nnoremap <silent> <Space> :silent nohls<Bar>echo<CR>
+
 "Highlight current line
 hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 nnoremap <Leader>c :silent set cursorline!<Bar>echo<CR>
+
 " Autoclose braces
 inoremap {<CR> {<CR>}<Esc>O
 inoremap [<CR> [<CR>]<Esc>O
 inoremap (<CR> (<CR>)<Esc>O
+
 " Switch between split windows
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-h> <C-w>h
 map <C-l> <C-w>l
+
 " Resize split windows
 if bufwinnr(1)
     " Horizontal split windows
@@ -109,9 +120,9 @@ if bufwinnr(1)
     nnoremap <silent> < <C-w><<C-w>< 
 endif
 
-"------
-"Alias 
-"------
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Alias 
+""""""""""""""""""""""""""""""""""""""""""""""""""""
 cnoreabbrev W w
 cnoreabbrev Q q
 cnoreabbrev Wq wq
@@ -119,24 +130,35 @@ cnoreabbrev Tabnew tabnew
 cnoreabbrev TAbnew tabnew
 cnoreabbrev tAbnew tabnew
 
-"--------------
-"Miscellaneous
-"--------------
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Miscellaneous
+""""""""""""""""""""""""""""""""""""""""""""""""""""
 set wildmenu "enable ctrl-n and ctrl-p to scroll thru matches
 set wildmode=longest,full
+
 set hlsearch
+
 set ignorecase "ignore case when searching
 set smartcase
+
 set magic "set magic on, for regular expressions
+
 set pastetoggle=<F2>
+
 set ruler
 set number
+
 set undolevels=1000
+
 set splitbelow "split windows at bottom
 "set splitright "split windows on the right
+"
 let mapleader = ","
+
 set noswapfile "disable swap
+
 "set clipboard=unnamed
+"
 highlight MatchParen cterm=bold ctermfg=cyan
 " In visual mode when you press * or # to search for the current selection
 vnoremap <silent> * :call VisualSearch('f')<CR>
@@ -161,9 +183,18 @@ function! VisualSearch(direction) range
     let @" = l:saved_reg
 endfunction
 
-"--------------------
-"Tab and indentation
-"--------------------
+" Resize splits when window is resized
+au VimResized * exe "normal! \<c-w>="
+
+" Git
+" Spell check Git commit message
+autocmd BufRead COMMIT_EDITMSG setlocal spell!
+" Show Git diff in window split when committing
+autocmd BufRead COMMIT_EDITMSG cd .. | DiffGitCached | wincmd p
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Tab and indentation
+""""""""""""""""""""""""""""""""""""""""""""""""""""
 set autoindent
 set expandtab
 set tabstop=4
@@ -176,9 +207,9 @@ autocmd FileType html setlocal shiftwidth=4 tabstop=4
 au FileType xml exe ":silent 1,$!XMLLINT_INDENT='    ' xmllint --format --recover - 2>/dev/null"
 set backspace=indent,eol,start
 
-"------------------------------
-"Script to convert tabs/spaces
-"------------------------------
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Script to convert tabs/spaces
+""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Return indent (all whitespace at start of a line), converted from
 " tabs to spaces if what = 1, or from spaces to tabs otherwise.
 " When converting to tabs, result has no redundant spaces.
@@ -208,21 +239,23 @@ command! -nargs=? -range=% Space2Tab call IndentConvert(<line1>,<line2>,0,<q-arg
 command! -nargs=? -range=% Tab2Space call IndentConvert(<line1>,<line2>,1,<q-args>)
 command! -nargs=? -range=% RetabIndent call IndentConvert(<line1>,<line2>,&et,<q-args>)
 
-"-------------
-"Omnicomplete
-"------------
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Omnicomplete
+""""""""""""""""""""""""""""""""""""""""""""""""""""
 set ofu=syntaxcomplete#Complete
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-" Change the 'completeopt' option so that Vim's popup menu doesn't select the first completion item, but just inserts the longest common text of all matches
+" Change the 'completeopt' option so that Vim's popup menu doesn't select the first completion item, 
+" but just inserts the longest common text of all matches
 set completeopt=longest,menuone,preview
 " If you prefer the Omni-Completion tip window to close when a selection is
 " made, these lines close it on movement in insert mode or when leaving
 " insert mode
 "autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
 let OmniCpp_NamespaceSearch = 2 " search name spaces in this and included files
 let OmniCpp_ShowPrototypeInAbbr = 1 " show function prototype (i.e. parameters) in popup window
 let OmniCpp_LocalSearchDecl = 1 " don't require special style of function opening braces
@@ -233,32 +266,32 @@ let OmniCpp_ShowAccess = 1
 autocmd FileType xml,html setlocal macmeta " required for MacVim
 autocmd FileType xml,html imap <buffer> <M-D-.> </<C-X><C-O>
 
-"---------
-"SuperTab 
-"---------
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => SuperTab 
+""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 " Let SuperTab decide which completion mode to use and should play well with OmniCompletion: 
 let g:SuperTabDefaultCompletionType = "context"
 " Close preview window on <cr>
 let g:SuperTabCrClosePreview = 1
 
-"-------
-"TagBar
-"-------
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => TagBar
+""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <F8> :TagbarToggle<CR> 
 let g:tagbar_singleclick = 1
 let g:tagbar_autoshowtag = 1
 let g:tagbar_sort = 0
 
-"---------
-"Yankring
-"---------
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Yankring
+""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <silent> <F5> :YRShow<CR>
 let g:yankring_history_dir = '$HOME/.vim/bundle/yankring/'
 
-"-----------
-"ConqueTerm
-"-----------
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => ConqueTerm
+""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Execute current file in Conque window
 let g:ConqueTerm_ExecFileKey = '<F11>'
 " Send selected text to Conque
@@ -272,24 +305,26 @@ let g:ConqueTerm_ToggleKey = '<F8>'
 " Press <C-w" to leave the Conque buffer
 let g:ConqueTerm_CWInsert = 1
 
-"-----
-"Gist
-"-----
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Gist
+""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:gist_show_privates = 1
 let g:gist_private = 1
-" gist.vim will copy the gist code with option "-c".
+" gist.vim will copy the gist URL automatically after posting it
+" or with option '-c' :Gist -c XXXX 
+" the content of the gist will be put into clipboard
 let g:gist_clip_command = 'pbcopy'
 " Detect filetype from filename
 let g:gist_detect_filetype = 1
 
-"---------
-"Powerline
-"---------
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Powerline
+""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:Powerline_symbols = 'compatible' 
 
-"---------
-"NERDTree
-"---------
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => NERDTree
+""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Open NerdTree automatically when vim starts up and no files are specified
 autocmd vimenter * if !argc() | NERDTree | endif
 "Close vim if NerdTree is the only window left
@@ -306,9 +341,9 @@ nmap <D-N> :NERDTreeToggle<CR>
 " Open the project tree and expose current file in the nerdtree with Ctrl-\
 nnoremap <silent> <C-\> :NERDTreeFind<CR>
 
-"----------
-"Syntastic
-"----------
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Syntastic
+""""""""""""""""""""""""""""""""""""""""""""""""""""
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -317,14 +352,14 @@ let g:syntastic_auto_loc_list=2
 let g:syntastic_check_on_open=1
 let g:ruby_path ='$HOME/.rvm/rubies/default/bin'
 
-"---------
-"tComment
-"---------
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => tComment
+""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Command-/ to toggle comments
 map <D-/> :TComment<CR>
 imap <D-/> <Esc>:TComment<CR>i
 
-"-----------
-"EasyMotion
-"-----------
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => EasyMotion
+""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:EasyMotion_leader_key = '<Leader>'
