@@ -33,11 +33,9 @@ if has("gui_running")
 endif
 
 if exists('+autochdir')
-    if &ft != 'gitcommit'
-        set autochdir
-    endif
-" else
-"     autocmd BufEnter * silent! lcd %:p:h:gs/ /\\ /
+    set autochdir
+else
+    autocmd BufEnter * silent! lcd %:p:h:gs/ /\\ /
 endif
 
 "Disable bell
@@ -189,8 +187,10 @@ au VimResized * exe "normal! \<c-w>="
 " Git
 " Spell check Git commit message
 autocmd BufRead COMMIT_EDITMSG setlocal spell!
-" Show Git diff in window split when committing
-autocmd BufRead COMMIT_EDITMSG cd .. | DiffGitCached | wincmd p
+" Show Git diff in window split when committing in terminal
+if !has("gui_running")
+    autocmd BufRead COMMIT_EDITMSG cd .. | DiffGitCached
+endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Tab and indentation
