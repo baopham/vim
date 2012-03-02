@@ -167,7 +167,7 @@ set noswapfile "disable swap
 
 highlight MatchParen cterm=bold ctermfg=cyan
 
-" In visual mode when you press * or # to search for the current selection {{
+" {{{ In visual mode when you press * or # to search for the current selection
 vnoremap <silent> * :call VisualSearch('f')<CR>
 vnoremap <silent> # :call VisualSearch('b')<CR>
 " From an idea by Michael Naumann
@@ -189,18 +189,18 @@ function! VisualSearch(direction) range
     let @/ = l:pattern
     let @" = l:saved_reg
 endfunction
-" }}
+" }}}
 
-" Git {{
+" {{{ Git 
 " Spell check Git commit message
 autocmd BufRead COMMIT_EDITMSG setlocal spell!
 " Show Git diff in window split when committing in terminal
 if !has("gui_running")
     autocmd BufRead COMMIT_EDITMSG cd .. | DiffGitCached 
 endif
-" }}
+" }}}
 
-" Funtion to swap split windows {{
+" {{{ Funtion to swap split windows 
 function! MarkWindowSwap()
     let g:markedWinNum = winnr()
 endfunction
@@ -222,7 +222,7 @@ endfunction
 
 nmap <silent> <leader>mw :call MarkWindowSwap()<CR>
 nmap <silent> <leader>sw :call DoWindowSwap()<CR>
-" }}
+" }}}
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Tab and indentation
