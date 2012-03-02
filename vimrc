@@ -98,9 +98,9 @@ imap jj <ESC>
 " Press space to clear search highlighting and any message already displayed.
 nnoremap <silent> <Space> :silent nohls<Bar>echo<CR>
 
-"Highlight current line
+" Highlight current line
 hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
-nnoremap <Leader>c :silent set cursorline!<Bar>echo<CR>
+nnoremap <leader>c :silent set cursorline!<Bar>echo<CR>
 
 " Autoclose braces
 inoremap {<CR> {<CR>}<Esc>O
@@ -155,15 +155,19 @@ set undolevels=1000
 
 set splitbelow "split windows at bottom
 "set splitright "split windows on the right
-"
+
+" Resize splits when window is resized
+au VimResized * exe "normal! \<c-w>="
+
 let mapleader = ","
 
 set noswapfile "disable swap
 
 "set clipboard=unnamed
-"
+
 highlight MatchParen cterm=bold ctermfg=cyan
-" In visual mode when you press * or # to search for the current selection
+
+" In visual mode when you press * or # to search for the current selection {{
 vnoremap <silent> * :call VisualSearch('f')<CR>
 vnoremap <silent> # :call VisualSearch('b')<CR>
 " From an idea by Michael Naumann
@@ -185,17 +189,40 @@ function! VisualSearch(direction) range
     let @/ = l:pattern
     let @" = l:saved_reg
 endfunction
+" }}
 
-" Resize splits when window is resized
-au VimResized * exe "normal! \<c-w>="
-
-" Git
+" Git {{
 " Spell check Git commit message
 autocmd BufRead COMMIT_EDITMSG setlocal spell!
 " Show Git diff in window split when committing in terminal
 if !has("gui_running")
-    autocmd BufRead COMMIT_EDITMSG cd .. | DiffGitCached
+    autocmd BufRead COMMIT_EDITMSG cd .. | DiffGitCached 
 endif
+" }}
+
+" Funtion to swap split windows {{
+function! MarkWindowSwap()
+    let g:markedWinNum = winnr()
+endfunction
+
+function! DoWindowSwap()
+    "Mark destination
+    let curNum = winnr()
+    let curBuf = bufnr( "%" )
+    exe g:markedWinNum . "wincmd w"
+    "Switch to source and shuffle dest->source
+    let markedBuf = bufnr( "%" )
+    "Hide and open so that we aren't prompted and keep history
+    exe 'hide buf' curBuf
+    "Switch to dest and shuffle source->dest
+    exe curNum . "wincmd w"
+    "Hide and open so that we aren't prompted and keep history
+    exe 'hide buf' markedBuf 
+endfunction
+
+nmap <silent> <leader>mw :call MarkWindowSwap()<CR>
+nmap <silent> <leader>sw :call DoWindowSwap()<CR>
+" }}
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Tab and indentation
