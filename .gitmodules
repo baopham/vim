@@ -51,3 +51,6 @@
 [submodule "bundle/repeat"]
     path = bundle/repeat
     url = git://github.com/tpope/vim-repeat.git
+[submodule "bundle/markdown"]
+	path = bundle/markdown
+	url = git://github.com/tpope/vim-markdown.git
