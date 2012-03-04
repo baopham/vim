@@ -353,6 +353,13 @@ let g:gist_detect_filetype = 1
 " => Powerline
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 let g:Powerline_symbols = 'compatible' 
+" Overriding symbols
+let g:Powerline_symbols_override = {
+    \   'BRANCH': [0x2b60]
+    \ , 'RO'    : [0x2b64]
+    \ , 'FT'    : [0x2b62, 0x2b63]
+    \ , 'LINE'  : [0x2b61]
+\}
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => NERDTree
