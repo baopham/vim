@@ -282,12 +282,6 @@ autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 " Change the 'completeopt' option so that Vim's popup menu doesn't select the first completion item, 
 " but just inserts the longest common text of all matches
 set completeopt=longest,menuone,preview
-" If you prefer the Omni-Completion tip window to close when a selection is
-" made, these lines close it on movement in insert mode or when leaving
-" insert mode
-"autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
-autocmd InsertLeave * if pumvisible() == 0|pclose|endif
-
 let OmniCpp_NamespaceSearch = 2 " search name spaces in this and included files
 let OmniCpp_ShowPrototypeInAbbr = 1 " show function prototype (i.e. parameters) in popup window
 let OmniCpp_LocalSearchDecl = 1 " don't require special style of function opening braces
@@ -304,8 +298,8 @@ autocmd FileType xml,html imap <buffer> <M-D-.> </<C-X><C-O>
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 " Let SuperTab decide which completion mode to use and should play well with OmniCompletion: 
 let g:SuperTabDefaultCompletionType = "context"
-" Close preview window on <cr>
-let g:SuperTabCrClosePreview = 1
+" Close preview window when completion is finished or canceled
+let g:SuperTabClosePreviewOnPopupClose = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => TagBar
