@@ -361,6 +361,7 @@ let g:Powerline_symbols_override = {
     \ , 'LINE'  : [0x2b61]
 \}
 
+" Overriding dividers
 let g:Powerline_dividers_override = ['', [0x2b81], '', [0x2b83]]
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
