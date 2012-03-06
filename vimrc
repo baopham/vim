@@ -113,15 +113,16 @@ map <C-k> <C-w>k
 map <C-h> <C-w>h
 map <C-l> <C-w>l
 
-" Resize split windows
-if bufwinnr(1)
-    " Horizontal split windows
-    nnoremap <silent> + <C-w>+<C-w>+
-    nnoremap <silent> - <C-w>-<C-w>-
-    " Vertical split windows
-    nnoremap <silent> > <C-w>><C-w>> 
-    nnoremap <silent> < <C-w><<C-w>< 
-endif
+" Easy resizing split windows {{{
+    if bufwinnr(1)
+        " Horizontal split windows
+        nnoremap <silent> + <C-w>+<C-w>+
+        nnoremap <silent> - <C-w>-<C-w>-
+        " Vertical split windows
+        nnoremap <silent> > <C-w>><C-w>> 
+        nnoremap <silent> < <C-w><<C-w>< 
+    endif
+" }}}
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Alias 
@@ -167,61 +168,60 @@ set noswapfile "disable swap
 
 highlight MatchParen cterm=bold ctermfg=cyan
 
-" {{{ In visual mode when you press * or # to search for the current selection
-vnoremap <silent> * :call VisualSearch('f')<CR>
-vnoremap <silent> # :call VisualSearch('b')<CR>
-" From an idea by Michael Naumann
-function! VisualSearch(direction) range
-    let l:saved_reg = @"
-    execute "normal! vgvy"
+" Press # to search for the selection {{{
+    vnoremap <silent> # :call VisualSearch('b')<CR>
+    " From an idea by Michael Naumann
+    function! VisualSearch(direction) range
+        let l:saved_reg = @"
+        execute "normal! vgvy"
 
-    let l:pattern = escape(@", '\\/.*$^~[]')
-    let l:pattern = substitute(l:pattern, "\n$", "", "")
+        let l:pattern = escape(@", '\\/.*$^~[]')
+        let l:pattern = substitute(l:pattern, "\n$", "", "")
 
-    if a:direction == 'b'
-        execute "normal ?" . l:pattern . "^M"
-    elseif a:direction == 'gv'
-        call CmdLine("vimgrep " . '/'. l:pattern . '/' . ' **/*.')
-    elseif a:direction == 'f'
-        execute "normal /" . l:pattern . "^M"
+        if a:direction == 'b'
+            execute "normal ?" . l:pattern . "^M"
+        elseif a:direction == 'gv'
+            call CmdLine("vimgrep " . '/'. l:pattern . '/' . ' **/*.')
+        elseif a:direction == 'f'
+            execute "normal /" . l:pattern . "^M"
+        endif
+
+        let @/ = l:pattern
+        let @" = l:saved_reg
+    endfunction
+" }}}
+
+" Git config {{{
+    " Spell check Git commit message
+    autocmd BufRead COMMIT_EDITMSG setlocal spell!
+    " Show Git diff in window split when committing in terminal
+    if !has("gui_running")
+        autocmd BufRead COMMIT_EDITMSG cd .. | DiffGitCached 
     endif
-
-    let @/ = l:pattern
-    let @" = l:saved_reg
-endfunction
 " }}}
 
-" {{{ Git 
-" Spell check Git commit message
-autocmd BufRead COMMIT_EDITMSG setlocal spell!
-" Show Git diff in window split when committing in terminal
-if !has("gui_running")
-    autocmd BufRead COMMIT_EDITMSG cd .. | DiffGitCached 
-endif
-" }}}
+" Funtion to swap split windows {{{
+    function! MarkWindowSwap()
+        let g:markedWinNum = winnr()
+    endfunction
 
-" {{{ Funtion to swap split windows 
-function! MarkWindowSwap()
-    let g:markedWinNum = winnr()
-endfunction
+    function! DoWindowSwap()
+        "Mark destination
+        let curNum = winnr()
+        let curBuf = bufnr( "%" )
+        exe g:markedWinNum . "wincmd w"
+        "Switch to source and shuffle dest->source
+        let markedBuf = bufnr( "%" )
+        "Hide and open so that we aren't prompted and keep history
+        exe 'hide buf' curBuf
+        "Switch to dest and shuffle source->dest
+        exe curNum . "wincmd w"
+        "Hide and open so that we aren't prompted and keep history
+        exe 'hide buf' markedBuf 
+    endfunction
 
-function! DoWindowSwap()
-    "Mark destination
-    let curNum = winnr()
-    let curBuf = bufnr( "%" )
-    exe g:markedWinNum . "wincmd w"
-    "Switch to source and shuffle dest->source
-    let markedBuf = bufnr( "%" )
-    "Hide and open so that we aren't prompted and keep history
-    exe 'hide buf' curBuf
-    "Switch to dest and shuffle source->dest
-    exe curNum . "wincmd w"
-    "Hide and open so that we aren't prompted and keep history
-    exe 'hide buf' markedBuf 
-endfunction
-
-nmap <silent> <leader>mw :call MarkWindowSwap()<CR>
-nmap <silent> <leader>sw :call DoWindowSwap()<CR>
+    nmap <silent> <leader>mw :call MarkWindowSwap()<CR>
+    nmap <silent> <leader>sw :call DoWindowSwap()<CR>
 " }}}
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
@@ -279,9 +279,11 @@ autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+
 " Change the 'completeopt' option so that Vim's popup menu doesn't select the first completion item, 
 " but just inserts the longest common text of all matches
 set completeopt=longest,menuone,preview
+
 let OmniCpp_NamespaceSearch = 2 " search name spaces in this and included files
 let OmniCpp_ShowPrototypeInAbbr = 1 " show function prototype (i.e. parameters) in popup window
 let OmniCpp_LocalSearchDecl = 1 " don't require special style of function opening braces
@@ -322,13 +324,14 @@ let g:yankring_history_dir = '$HOME/.vim/bundle/yankring/'
 let g:ConqueTerm_ExecFileKey = '<F11>'
 " Send selected text to Conque
 let g:ConqueTerm_SendVisKey = '<F9>'
+" Map F12 to start conque in bash
 nmap <F12> :ConqueTermSplit bash -l<CR>
 let g:ConqueTerm_InsertOnEnter = 1
 " Display warning msg at startup
 let g:ConqueTerm_StartMessages = 1
 let g:ConqueTerm_TERM = 'xterm'
 let g:ConqueTerm_ToggleKey = '<F8>'
-" Press <C-w" to leave the Conque buffer
+" Press <C-w> to leave the Conque buffer
 let g:ConqueTerm_CWInsert = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
