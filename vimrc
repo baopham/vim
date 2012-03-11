@@ -100,7 +100,7 @@ nnoremap <silent> <Space> :silent nohls<Bar>echo<CR>
 
 " Highlight current line
 hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
-nnoremap <leader>c :silent set cursorline!<Bar>echo<CR>
+nnoremap <C-c> :silent set cursorline!<Bar>echo<CR>
 
 " Autoclose braces
 inoremap {<CR> {<CR>}<Esc>O
