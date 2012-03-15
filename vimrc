@@ -43,7 +43,7 @@ else
     autocmd BufEnter * silent! lcd %:p:h:gs/ /\\ /
 endif
 
-"Disable bell
+" Disable bell
 set visualbell
 
 " Tell vim to remember certain things when we exit
@@ -168,27 +168,19 @@ set noswapfile "disable swap
 
 highlight MatchParen cterm=bold ctermfg=cyan
 
-" Press # to search for the selection {{{
-    vnoremap <silent> # :call VisualSearch('b')<CR>
-    " From an idea by Michael Naumann
-    function! VisualSearch(direction) range
-        let l:saved_reg = @"
-        execute "normal! vgvy"
-
-        let l:pattern = escape(@", '\\/.*$^~[]')
-        let l:pattern = substitute(l:pattern, "\n$", "", "")
-
-        if a:direction == 'b'
-            execute "normal ?" . l:pattern . "^M"
-        elseif a:direction == 'gv'
-            call CmdLine("vimgrep " . '/'. l:pattern . '/' . ' **/*.')
-        elseif a:direction == 'f'
-            execute "normal /" . l:pattern . "^M"
-        endif
-
-        let @/ = l:pattern
-        let @" = l:saved_reg
-    endfunction
+" Search for selected text, forwards or backwards {{{
+    " Press * to search forwards
+    vnoremap <silent> * :<C-U>
+      \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
+      \gvy/<C-R><C-R>=substitute(
+      \escape(@", '/\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
+      \gV:call setreg('"', old_reg, old_regtype)<CR>
+    " Press # to search backwards
+    vnoremap <silent> # :<C-U>
+      \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
+      \gvy?<C-R><C-R>=substitute(
+      \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
+      \gV:call setreg('"', old_reg, old_regtype)<CR>
 " }}}
 
 " Git config {{{
