@@ -302,6 +302,12 @@ let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 let g:SuperTabDefaultCompletionType = "context"
 " Close preview window when completion is finished or canceled
 let g:SuperTabClosePreviewOnPopupClose = 1
+" Completion chaining
+autocmd FileType *
+\ if &omnifunc != '' |
+\   let g:SuperTabDefaultCompletionType = '<c-x><c-u>' |
+\   call SuperTabChain(&omnifunc, '<c-p>') |
+\ endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => TagBar
