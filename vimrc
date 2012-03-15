@@ -267,10 +267,6 @@ command! -nargs=? -range=% RetabIndent call IndentConvert(<line1>,<line2>,&et,<q
 " => Omnicomplete
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 set ofu=syntaxcomplete#Complete
-autocmd FileType python set omnifunc=pythoncomplete#Complete
-autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 
 " Change the 'completeopt' option so that Vim's popup menu doesn't select the first completion item, 
 " but just inserts the longest common text of all matches
