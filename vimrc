@@ -293,8 +293,8 @@ let g:SuperTabClosePreviewOnPopupClose = 1
 " Completion chaining
 autocmd FileType *
 \ if &omnifunc != '' |
-\   let g:SuperTabDefaultCompletionType = '<c-x><c-u>' |
-\   call SuperTabChain(&omnifunc, '<c-p>') |
+\   call SuperTabChain(&omnifunc, "<c-p>") |
+\   call SuperTabSetDefaultCompletionType("<c-x><c-u>") |
 \ endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
