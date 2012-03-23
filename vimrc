@@ -102,6 +102,13 @@ nnoremap <silent> <Space> :silent nohls<Bar>echo<CR>
 hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 nnoremap <C-c> :silent set cursorline!<Bar>echo<CR>
 
+" Highlight trailing whitespace
+highlight ExtraWhitespace cterm=NONE ctermbg=darkgreen guibg=lightgreen
+" Turn on highlighting 
+nnoremap <Leader>wn :match ExtraWhitespace /\s\+$/<CR>
+" Turn off
+nnoremap <Leader>wf :match<CR>
+
 " Autoclose braces
 inoremap {<CR> {<CR>}<Esc>O
 inoremap [<CR> [<CR>]<Esc>O
