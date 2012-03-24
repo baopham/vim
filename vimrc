@@ -27,7 +27,7 @@ if has("gui_running")
     imap <SwipeLeft> <Esc>gT<CR>
 	imap <SwipeRight> <Esc>gt<CR>
     try
-        set transparency=8
+        " set transparency=8
     catch
     endtry
     " Keep undo history across sessions
@@ -68,7 +68,7 @@ augroup END
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Pathogen
 """"""""""""""""""""""""""""""""""""""""""""""""""""
-call pathogen#infect() 
+call pathogen#infect()
 call pathogen#helptags()
 silent! call pathogen#runtime_append_all_bundles()
 
@@ -91,7 +91,7 @@ map <silent> <D-9> :tabn 9<cr>
 map <S-Enter> O<Esc>
 map <CR> o<Esc>
 
-" Map <ESC> to jk, jj, kj in Insert mode 
+" Map <ESC> to jk, jj, kj in Insert mode
 imap jk <ESC>
 imap jj <ESC>
 imap kj <ESC>
@@ -105,7 +105,7 @@ nnoremap <C-c> :silent set cursorline!<Bar>echo<CR>
 
 " Highlight trailing whitespace
 highlight ExtraWhitespace cterm=NONE ctermbg=darkgreen guibg=lightgreen
-" Turn on highlighting 
+" Turn on highlighting
 nnoremap <Leader>wn :match ExtraWhitespace /\s\+$/<CR>
 " Turn off
 nnoremap <Leader>wf :match<CR>
@@ -127,13 +127,13 @@ map <C-l> <C-w>l
         nnoremap <silent> + <C-w>+<C-w>+
         nnoremap <silent> - <C-w>-<C-w>-
         " Vertical split windows
-        nnoremap <silent> > <C-w>><C-w>> 
-        nnoremap <silent> < <C-w><<C-w>< 
+        nnoremap <silent> > <C-w>><C-w>>
+        nnoremap <silent> < <C-w><<C-w><
     endif
 " }}}
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
-" => Alias 
+" => Alias
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 cnoreabbrev W w
 cnoreabbrev Q q
@@ -196,7 +196,7 @@ highlight MatchParen cterm=bold ctermfg=cyan
     autocmd BufRead COMMIT_EDITMSG setlocal spell!
     " Show Git diff in window split when committing in terminal
     if !has("gui_running")
-        autocmd BufRead COMMIT_EDITMSG cd .. | DiffGitCached 
+        autocmd BufRead COMMIT_EDITMSG cd .. | DiffGitCached
     endif
 " }}}
 
@@ -217,7 +217,7 @@ highlight MatchParen cterm=bold ctermfg=cyan
         "Switch to dest and shuffle source->dest
         exe curNum . "wincmd w"
         "Hide and open so that we aren't prompted and keep history
-        exe 'hide buf' markedBuf 
+        exe 'hide buf' markedBuf
     endfunction
 
     nmap <silent> <leader>mw :call MarkWindowSwap()<CR>
@@ -276,7 +276,7 @@ command! -nargs=? -range=% RetabIndent call IndentConvert(<line1>,<line2>,&et,<q
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 set ofu=syntaxcomplete#Complete
 
-" Change the 'completeopt' option so that Vim's popup menu doesn't select the first completion item, 
+" Change the 'completeopt' option so that Vim's popup menu doesn't select the first completion item,
 " but just inserts the longest common text of all matches
 set completeopt=longest,menuone,preview
 
@@ -291,10 +291,10 @@ autocmd FileType xml,html setlocal macmeta " required for MacVim
 autocmd FileType xml,html imap <buffer> <M-D-.> </<C-X><C-O>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
-" => SuperTab 
+" => SuperTab
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
-" Let SuperTab decide which completion mode to use and should play well with OmniCompletion: 
+" Let SuperTab decide which completion mode to use and should play well with OmniCompletion:
 let g:SuperTabDefaultCompletionType = "context"
 " Close preview window when completion is finished or canceled
 let g:SuperTabClosePreviewOnPopupClose = 1
@@ -308,7 +308,7 @@ autocmd FileType *
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => TagBar
 """"""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <F8> :TagbarToggle<CR> 
+nmap <F8> :TagbarToggle<CR>
 let g:tagbar_singleclick = 1
 let g:tagbar_autoshowtag = 1
 let g:tagbar_sort = 0
@@ -342,7 +342,7 @@ let g:ConqueTerm_CWInsert = 1
 let g:gist_show_privates = 1
 let g:gist_private = 1
 " gist.vim will copy the gist URL automatically after posting it
-" or with option '-c' :Gist -c XXXX 
+" or with option '-c' :Gist -c XXXX
 " the content of the gist will be put into clipboard
 let g:gist_clip_command = 'pbcopy'
 " Detect filetype from filename
@@ -351,16 +351,21 @@ let g:gist_detect_filetype = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Powerline
 """"""""""""""""""""""""""""""""""""""""""""""""""""
-let g:Powerline_symbols = 'compatible' 
-" Overriding symbols
-let g:Powerline_symbols_override = {
-    \   'BRANCH': [0x2b60]
-    \ , 'RO'    : [0x2b64]
-    \ , 'FT'    : [0x2b62, 0x2b63]
-    \ , 'LINE'  : [0x2b61]
-\}
-" Overriding dividers
-let g:Powerline_dividers_override = ['', [0x2b81], '', [0x2b83]]
+if has('gui_running')
+    let g:Powerline_symbols = 'fancy'
+else
+    " Overriding symbols
+    let g:Powerline_symbols_override = {
+        \   'BRANCH': [0x2b60]
+        \ , 'RO'    : [0x2b64]
+        \ , 'FT'    : [0x2b62, 0x2b63]
+        \ , 'LINE'  : [0x2b61]
+    \}
+    " Overriding dividers
+    let g:Powerline_dividers_override = ['', [0x2b81], '', [0x2b83]]
+endif
+" Trailing whitespace segment
+call Pl#Theme#InsertSegment('ws_marker', 'after', 'lineinfo')
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => NERDTree
