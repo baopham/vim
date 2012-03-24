@@ -91,9 +91,10 @@ map <silent> <D-9> :tabn 9<cr>
 map <S-Enter> O<Esc>
 map <CR> o<Esc>
 
-" Map <ESC> to jk, jj in Insert mode 
+" Map <ESC> to jk, jj, kj in Insert mode 
 imap jk <ESC>
 imap jj <ESC>
+imap kj <ESC>
 
 " Press space to clear search highlighting and any message already displayed.
 nnoremap <silent> <Space> :silent nohls<Bar>echo<CR>
