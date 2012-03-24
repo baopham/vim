@@ -23,9 +23,9 @@ if has("gui_running")
     set lines=73 columns=212
     let g:tagbar_iconchars = ['▸', '▾']
     map <SwipeLeft> gT
-	map <SwipeRight> gt
+    map <SwipeRight> gt
     imap <SwipeLeft> <Esc>gT<CR>
-	imap <SwipeRight> <Esc>gt<CR>
+    imap <SwipeRight> <Esc>gt<CR>
     try
         " set transparency=8
     catch
