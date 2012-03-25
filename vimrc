@@ -21,14 +21,18 @@ if has("gui_running")
     set guioptions-=T
     set showtabline=2 "always show tabs
     set lines=73 columns=212
+
     let g:tagbar_iconchars = ['▸', '▾']
+
     map <SwipeLeft> gT
     map <SwipeRight> gt
     imap <SwipeLeft> <Esc>gT<CR>
     imap <SwipeRight> <Esc>gt<CR>
-    " Keep undo history across sessions
-    set undodir=~/.vim/backups
-    set undofile
+
+    " Turn on/off transparency
+    map <Leader>trn :set transparency=8<CR>
+    map <Leader>trf :set transparency=0<CR>
+
     " Show tab number
     autocmd VimEnter * set guitablabel=%M\ %t\ \⌘%N
 endif
@@ -127,6 +131,7 @@ map <C-l> <C-w>l
         nnoremap <silent> < <C-w><<C-w><
     endif
 " }}}
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Alias
