@@ -236,6 +236,7 @@ set softtabstop=4
 "set smartindent
 autocmd FileType python setlocal expandtab sta sw=4 sts=4
 autocmd FileType html setlocal shiftwidth=4 tabstop=4
+autocmd FileType ruby setlocal expandtab sta sw=2 sts=2
 au FileType xml exe ":silent 1,$!XMLLINT_INDENT='    ' xmllint --format --recover - 2>/dev/null"
 set backspace=indent,eol,start
 
