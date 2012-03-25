@@ -26,10 +26,6 @@ if has("gui_running")
     map <SwipeRight> gt
     imap <SwipeLeft> <Esc>gT<CR>
     imap <SwipeRight> <Esc>gt<CR>
-    try
-        " set transparency=8
-    catch
-    endtry
     " Keep undo history across sessions
     set undodir=~/.vim/backups
     set undofile
@@ -154,8 +150,6 @@ set ignorecase "ignore case when searching
 set smartcase
 
 set magic "set magic on, for regular expressions
-
-set pastetoggle=<F2>
 
 set ruler
 set number
@@ -404,6 +398,8 @@ let g:ruby_path ='$HOME/.rvm/rubies/default/bin'
 " Command-/ to toggle comments
 map <D-/> :TComment<CR>
 imap <D-/> <Esc>:TComment<CR>i
+" Don't comment blank lines
+let g:tcommentBlankLines = 0
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => EasyMotion
