@@ -56,6 +56,6 @@
 [submodule "bundle/calendar"]
 	path = bundle/calendar
 	url = git://github.com/mattn/calendar-vim.git
-[submodule "bundle/TrailerTrash"]
-	path = bundle/TrailerTrash
+[submodule "bundle/trailertrash"]
+	path = bundle/trailertrash
 	url = git://github.com/csexton/trailertrash.vim.git
