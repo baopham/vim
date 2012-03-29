@@ -58,4 +58,4 @@
 	url = git://github.com/mattn/calendar-vim.git
 [submodule "bundle/trailertrash"]
 	path = bundle/trailertrash
-	url = git://github.com/csexton/trailertrash.vim.git
+	url = git@github.com:baopham/trailertrash.vim.git
