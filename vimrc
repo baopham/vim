@@ -410,3 +410,10 @@ let g:tcommentBlankLines = 0
 " => EasyMotion
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 let g:EasyMotion_leader_key = '<Leader>'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => TrailerTrash & Calendar
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Hide trailer highlighting in Calendar buffer
+au FileType calendar :HideTrailer
+
