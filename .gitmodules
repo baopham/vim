@@ -55,3 +55,6 @@
 [submodule "bundle/trailertrash"]
 	path = bundle/trailertrash
 	url = git@github.com:baopham/trailertrash.vim.git
+[submodule "bundle/webapi"]
+	path = bundle/webapi
+	url = git://github.com/mattn/webapi-vim
