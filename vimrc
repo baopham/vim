@@ -341,6 +341,7 @@ let g:ConqueTerm_CWInsert = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 let g:gist_show_privates = 1
 let g:gist_private = 1
+let g:gist_get_multiplefile = 1
 " gist.vim will copy the gist URL automatically after posting it
 " or with option '-c' :Gist -c XXXX
 " the content of the gist will be put into clipboard
@@ -412,8 +413,8 @@ let g:tcommentBlankLines = 0
 let g:EasyMotion_leader_key = '<Leader>'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
-" => TrailerTrash & Calendar
+" => TrailerTrash
 """"""""""""""""""""""""""""""""""""""""""""""""""""
-" Hide trailer highlighting in Calendar buffer
-au FileType calendar :HideTrailer
+" Hide trailer highlighting as default
+au FileType * :HideTrailer
 
