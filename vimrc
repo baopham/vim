@@ -420,3 +420,9 @@ let g:EasyMotion_leader_key = '<Leader>'
 " Hide trailer highlighting as default
 au FileType * :HideTrailer
 let g:trailertrash_blacklist = ['__Calendar']
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Quickrun
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Display the Ouput split window horizontally
+let b:quickrun_config = { 'outputter/buffer/split': ''}
