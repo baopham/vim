@@ -62,3 +62,7 @@
 	path = bundle/detectindent
 	url = git://github.com/ciaranm/detectindent.git
 	ignore = untracked
+[submodule "bundle/quickrun"]
+	path = bundle/quickrun
+	url = git://github.com/thinca/vim-quickrun.git
+	ignore = untracked
