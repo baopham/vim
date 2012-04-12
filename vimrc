@@ -425,4 +425,4 @@ let g:trailertrash_blacklist = ['__Calendar']
 " => Quickrun
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " Display the Ouput split window horizontally
-let b:quickrun_config = { 'outputter/buffer/split': ''}
+let b:quickrun_config = { 'outputter/buffer/split': '%{winwidth(0) > winheight(0) * 2 ? "vertical" : ""}'}
