@@ -66,3 +66,6 @@
 	path = bundle/quickrun
 	url = git://github.com/thinca/vim-quickrun.git
 	ignore = untracked
+[submodule "bundle/sonictemplate"]
+	path = bundle/sonictemplate
+	url = git://github.com/mattn/sonictemplate-vim.git
