@@ -422,7 +422,12 @@ au FileType * :HideTrailer
 let g:trailertrash_blacklist = ['__Calendar']
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
-" => Quickrun
+" => QuickRun
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " Display the Ouput split window horizontally
 let b:quickrun_config = { 'outputter/buffer/split': '%{winwidth(0) > winheight(0) * 2 ? "vertical" : ""}'}
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => SonicTemplate
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:sonictemplate_vim_template_dir = '$HOME/.vim/template'
