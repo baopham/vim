@@ -193,10 +193,6 @@ highlight MatchParen cterm=bold ctermfg=cyan
 " Git config {{{
     " Spell check Git commit message
     autocmd BufRead COMMIT_EDITMSG setlocal spell!
-    " Show Git diff in window split when committing in terminal
-    if !has("gui_running")
-        autocmd BufRead COMMIT_EDITMSG cd .. | DiffGitCached
-    endif
 " }}}
 
 " Funtion to swap split windows {{{
