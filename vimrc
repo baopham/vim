@@ -10,32 +10,9 @@ set laststatus=2
 set encoding=utf-8
 " Set vim for 256 color schemes
 set t_Co=256
-colo Sunburst
 
 if has('mouse')
     set mouse=a
-endif
-
-if has("gui_running")
-    colo wombat
-    set gfn=Monaco\ for\ Powerline:h12
-    set guioptions-=T
-    set showtabline=2 "always show tabs
-    set lines=73 columns=212
-
-    let g:tagbar_iconchars = ['▸', '▾']
-
-    map <SwipeLeft> gT
-    map <SwipeRight> gt
-    imap <SwipeLeft> <Esc>gT<CR>
-    imap <SwipeRight> <Esc>gt<CR>
-
-    " Turn on/off transparency
-    map <Leader>trn :set transparency=8<CR>
-    map <Leader>trf :set transparency=0<CR>
-
-    " Show tab number
-    autocmd VimEnter * set guitablabel=%M\ %t\ \⌘%N
 endif
 
 if exists('+autochdir')
@@ -65,6 +42,49 @@ augroup ResCur
     autocmd!
     autocmd BufWinEnter * call ResCur()
 augroup END
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Colorscheme
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+colo Sunburst
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Spelling
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+set spellsuggest=10
+highlight clear SpellBad
+highlight SpellBad term=standout ctermfg=1 term=underline cterm=underline
+highlight clear SpellCap
+highlight SpellCap term=underline cterm=underline
+highlight clear SpellRare
+highlight SpellRare term=underline cterm=underline
+highlight clear SpellLocal
+highlight SpellLocal term=underline cterm=underline
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => GUI MacVim
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+if has("gui_running")
+    colo wombat
+    set gfn=Monaco\ for\ Powerline:h12
+    set guioptions-=T
+    set showtabline=2 "always show tabs
+    set lines=73 columns=212
+
+    let g:tagbar_iconchars = ['▸', '▾']
+
+    map <SwipeLeft> gT
+    map <SwipeRight> gt
+    imap <SwipeLeft> <Esc>gT<CR>
+    imap <SwipeRight> <Esc>gt<CR>
+
+    " Turn on/off transparency
+    map <Leader>trn :set transparency=8<CR>
+    map <Leader>trf :set transparency=0<CR>
+
+    " Show tab number
+    autocmd VimEnter * set guitablabel=%M\ %t\ \⌘%N
+endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Pathogen
