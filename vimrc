@@ -10,6 +10,7 @@ set laststatus=2
 set encoding=utf-8
 " Set vim for 256 color schemes
 set t_Co=256
+colo Sunburst
 
 if has('mouse')
     set mouse=a
