@@ -51,6 +51,9 @@ colo Sunburst
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Spelling
 """"""""""""""""""""""""""""""""""""""""""""""""""""
+set dictionary-=/usr/share/dict/words dictionary+=/usr/share/dict/words dictionary+=$HOME/.vim/spell/en.utf-8.add
+" Shortcut to get dictionary completion in insert mode with <C-N>
+set complete-=k complete+=k
 set spellsuggest=10
 highlight clear SpellBad
 highlight SpellBad term=standout ctermfg=1 term=underline cterm=underline
