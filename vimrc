@@ -187,7 +187,7 @@ set splitbelow "split windows at bottom
 " Resize splits when window is resized
 au VimResized * exe "normal! \<c-w>="
 
-let mapleader = ","
+" let mapleader = ","
 
 set noswapfile "disable swap
 
@@ -441,8 +441,9 @@ let g:trailertrash_blacklist = ['__Calendar']
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => QuickRun
 """"""""""""""""""""""""""""""""""""""""""""""""""""
-" Display the Ouput split window horizontally
-let b:quickrun_config = { 'outputter/buffer/split': '%{winwidth(0) > winheight(0) * 2 ? "vertical" : ""}'}
+let b:quickrun_config = { 'outputter/buffer/append': 1 }
+silent! nnoremap <unique> <silent> <Leader>rh :QuickRun -outputter/buffer/split ""<cr>
+silent! nnoremap <unique> <silent> <Leader>rv :QuickRun -outputter/buffer/split "vertical"<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => SonicTemplate
