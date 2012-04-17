@@ -432,7 +432,7 @@ let g:tcommentBlankLines = 0
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => EasyMotion
 """"""""""""""""""""""""""""""""""""""""""""""""""""
-let g:EasyMotion_leader_key = '<Leader>'
+let g:EasyMotion_leader_key = ','
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => TrailerTrash
