@@ -452,3 +452,8 @@ silent! nnoremap <unique> <silent> <Leader>rv :QuickRun -outputter/buffer/split 
 " => SonicTemplate
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 let g:sonictemplate_vim_template_dir = '$HOME/.vim/template'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => GitV
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:Gitv_DoNotMapCtrlKey = 1

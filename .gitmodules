@@ -65,3 +65,6 @@
 [submodule "bundle/sonictemplate"]
 	path = bundle/sonictemplate
 	url = git://github.com/mattn/sonictemplate-vim.git
+[submodule "bundle/gitv"]
+	path = bundle/gitv
+	url = git://github.com/gregsexton/gitv.git
