@@ -144,6 +144,12 @@ map <C-k> <C-w>k
 map <C-h> <C-w>h
 map <C-l> <C-w>l
 
+" Navigate in insert mode
+imap <c-e><c-j> <down>
+imap <c-e><c-k> <up>
+imap <c-e><c-l> <right>
+imap <c-e><c-h> <left>
+
 " Easy resizing split windows {{{
     if bufwinnr(1)
         " Horizontal split windows
