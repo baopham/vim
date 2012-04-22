@@ -312,7 +312,9 @@ let OmniCpp_GlobalScopeSearch = 1
 let OmniCpp_ShowAccess = 1
 
 " Insert HTML/XML close tag with Option+Command+.
-autocmd FileType xml,html setlocal macmeta " required for MacVim
+if has('gui_running')
+    autocmd FileType xml,html setlocal macmeta " required for MacVim
+endif
 autocmd FileType xml,html imap <buffer> <M-D-.> </<C-X><C-O>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
