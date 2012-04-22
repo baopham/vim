@@ -49,3 +49,4 @@ hi Number		guifg=#e5786d gui=none
 hi Special		guifg=#e7f6da gui=none
 
 hi MatchParen ctermfg=173 ctermbg=NONE cterm=NONE guifg=yellow guibg=NONE gui=NONE
+hi Search term=reverse ctermfg=0 ctermbg=14 guifg=Black guibg=#b3ccea
