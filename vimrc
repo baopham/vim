@@ -44,25 +44,16 @@ augroup ResCur
 augroup END
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
+" => Pathogen
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+call pathogen#infect()
+call pathogen#helptags()
+silent! call pathogen#runtime_append_all_bundles()
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colorscheme
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 colo Sunburst
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Spelling
-""""""""""""""""""""""""""""""""""""""""""""""""""""
-set dictionary-=/usr/share/dict/words dictionary+=/usr/share/dict/words dictionary+=$HOME/.vim/spell/en.utf-8.add
-" Shortcut to get dictionary completion in insert mode with <C-N>
-set complete-=k complete+=k
-set spellsuggest=10
-highlight clear SpellBad
-highlight SpellBad term=standout ctermfg=1 term=underline cterm=underline
-highlight clear SpellCap
-highlight SpellCap term=underline cterm=underline
-highlight clear SpellRare
-highlight SpellRare term=underline cterm=underline
-highlight clear SpellLocal
-highlight SpellLocal term=underline cterm=underline
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => GUI MacVim
@@ -90,11 +81,20 @@ if has("gui_running")
 endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
-" => Pathogen
+" => Spelling
 """"""""""""""""""""""""""""""""""""""""""""""""""""
-call pathogen#infect()
-call pathogen#helptags()
-silent! call pathogen#runtime_append_all_bundles()
+set dictionary-=/usr/share/dict/words dictionary+=/usr/share/dict/words dictionary+=$HOME/.vim/spell/en.utf-8.add
+" Shortcut to get dictionary completion in insert mode with <C-N>
+set complete-=k complete+=k
+set spellsuggest=10
+highlight clear SpellBad
+highlight SpellBad term=standout ctermfg=1 term=underline cterm=underline
+highlight clear SpellCap
+highlight SpellCap term=underline cterm=underline
+highlight clear SpellRare
+highlight SpellRare term=underline cterm=underline
+highlight clear SpellLocal
+highlight SpellLocal term=underline cterm=underline
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => KeyMaps
@@ -160,7 +160,6 @@ imap <c-e><c-h> <left>
         nnoremap <silent> < <C-w><<C-w><
     endif
 " }}}
-
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Alias
