@@ -445,7 +445,7 @@ let g:EasyMotion_leader_key = ','
 " => TrailerTrash
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " Hide trailer highlighting as default
-au FileType * :HideTrailer
+au BufEnter * :HideTrailer
 let g:trailertrash_blacklist = ['__Calendar']
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
