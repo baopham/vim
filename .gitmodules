@@ -22,7 +22,7 @@
 	url = git://github.com/kevinw/pyflakes-vim.git
 [submodule "bundle/yankring"]
 	path = bundle/yankring
-	url = git://github.com/chrismetcalf/vim-yankring.git
+	url = git://github.com/vim-scripts/YankRing.vim.git
 	ignore = untracked
 [submodule "bundle/powerline"]
 	path = bundle/powerline
