@@ -54,6 +54,7 @@
 [submodule "bundle/webapi"]
 	path = bundle/webapi
 	url = git://github.com/mattn/webapi-vim
+	ignore = untracked
 [submodule "bundle/detectindent"]
 	path = bundle/detectindent
 	url = git://github.com/ciaranm/detectindent.git
