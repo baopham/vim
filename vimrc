@@ -247,6 +247,9 @@ highlight MatchParen cterm=bold ctermfg=cyan
     nmap <silent> <leader>sw :call DoWindowSwap()<CR>
 " }}}
 
+" Command to change to directory of the current file
+command CDC cd %:p:h
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Tab and indentation
 """"""""""""""""""""""""""""""""""""""""""""""""""""
