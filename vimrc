@@ -384,6 +384,8 @@ let g:gist_open_browser_after_post = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Powerline
 """"""""""""""""""""""""""""""""""""""""""""""""""""
+let g:Powerline_stl_path_style = 'filename'
+
 if has('gui_running')
     let g:Powerline_symbols = 'fancy'
 else
