@@ -62,6 +62,8 @@ if has("gui_running")
     colo wombat
     set gfn=Monaco\ for\ Powerline:h12
     set guioptions-=T
+    set guioptions-=L
+    set guioptions-=r
     set showtabline=2 "always show tabs
     set lines=73 columns=212
 
