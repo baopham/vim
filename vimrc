@@ -172,6 +172,7 @@ cnoreabbrev Wq wq
 cnoreabbrev Tabnew tabnew
 cnoreabbrev TAbnew tabnew
 cnoreabbrev tAbnew tabnew
+cmap w!! w !sudo tee > /dev/null %
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Miscellaneous
