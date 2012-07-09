@@ -473,3 +473,8 @@ let g:sonictemplate_vim_template_dir = '$HOME/.vim/template'
 " => GitV
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 let g:Gitv_DoNotMapCtrlKey = 1
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Gundo
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <leader>u :GundoToggle<CR>
