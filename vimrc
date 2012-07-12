@@ -178,6 +178,8 @@ cmap w!! w !sudo tee > /dev/null %
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Miscellaneous
 """"""""""""""""""""""""""""""""""""""""""""""""""""
+set noshowmode
+
 set wildmenu "enable ctrl-n and ctrl-p to scroll thru matches
 set wildmode=longest,full
 
