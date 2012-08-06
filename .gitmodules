@@ -45,9 +45,6 @@
 [submodule "bundle/markdown"]
 	path = bundle/markdown
 	url = git://github.com/tpope/vim-markdown.git
-[submodule "bundle/calendar"]
-	path = bundle/calendar
-	url = git://github.com/mattn/calendar-vim.git
 [submodule "bundle/trailertrash"]
 	path = bundle/trailertrash
 	url = git@github.com:baopham/trailertrash.vim.git
