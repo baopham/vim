@@ -385,7 +385,6 @@ let g:gist_clip_command = 'pbcopy'
 " Detect filetype from filename
 let g:gist_detect_filetype = 1
 " Open browser after posting
-let gist_browser_command = 'open %URL%'
 let g:gist_open_browser_after_post = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
