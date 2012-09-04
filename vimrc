@@ -368,7 +368,7 @@ let g:tagbar_width = 31
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Yankring
 """"""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <silent> <F5> :YRShow<CR>
+nnoremap <silent> \y :YRShow<CR>
 let g:yankring_history_dir = '$HOME/.vim/bundle/yankring/'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
