@@ -372,23 +372,6 @@ nnoremap <silent> \y :YRShow<CR>
 let g:yankring_history_dir = '$HOME/.vim/bundle/yankring/'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
-" => ConqueTerm
-""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Execute current file in Conque window
-let g:ConqueTerm_ExecFileKey = '<F11>'
-" Send selected text to Conque
-let g:ConqueTerm_SendVisKey = '<F9>'
-" Map F12 to start conque in bash
-nmap <F12> :ConqueTermSplit bash -l<CR>
-let g:ConqueTerm_InsertOnEnter = 1
-" Display warning msg at startup
-let g:ConqueTerm_StartMessages = 1
-let g:ConqueTerm_TERM = 'xterm'
-let g:ConqueTerm_ToggleKey = '<F8>'
-" Press <C-w> to leave the Conque buffer
-let g:ConqueTerm_CWInsert = 1
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Gist
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 let g:gist_show_privates = 1
