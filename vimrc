@@ -269,8 +269,24 @@ set softtabstop=4
 autocmd FileType python setlocal expandtab sta sw=4 sts=4
 autocmd FileType html setlocal shiftwidth=4 tabstop=4
 autocmd FileType ruby setlocal expandtab sta sw=2 sts=2
+autocmd FileType php setlocal expandtab sta sw=2 sts=2
 au FileType xml exe ":silent 1,$!XMLLINT_INDENT='    ' xmllint --format --recover - 2>/dev/null"
 set backspace=indent,eol,start
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Syntax
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+if has("autocmd")
+  " Drupal *.module and *.install files.
+  augroup module
+    autocmd BufRead,BufNewFile *.module set filetype=php
+    autocmd BufRead,BufNewFile *.install set filetype=php
+    autocmd BufRead,BufNewFile *.test set filetype=php
+    autocmd BufRead,BufNewFile *.inc set filetype=php
+    autocmd BufRead,BufNewFile *.profile set filetype=php
+    autocmd BufRead,BufNewFile *.view set filetype=php
+  augroup END
+endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Script to convert tabs/spaces
