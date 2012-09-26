@@ -123,7 +123,7 @@ imap jk <ESC>
 imap kj <ESC>
 
 " Press space to clear search highlighting and any message already displayed.
-nnoremap <silent> <Space> :silent nohls<Bar>echo<CR>
+nnoremap <silent> <Space> :silent noh<Bar>echo<CR>
 
 " Highlight current line
 hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
