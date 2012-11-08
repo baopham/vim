@@ -446,6 +446,8 @@ let NERDTreeStatusline = "%{getcwd()}"
 nmap <D-N> :NERDTreeToggle<CR>
 " Open the project tree and expose current file in the nerdtree with Ctrl-\
 nnoremap <silent> <C-\> :NERDTreeFind<CR>
+" Set location for bookmarks file
+let NERDTreeBookmarksFile = ".vim/bundle/nerdtree/NERDTreeBookmarks"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Syntastic
