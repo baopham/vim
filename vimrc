@@ -90,7 +90,7 @@ colo Sunburst
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 if has("gui_running")
     colo wombat
-    set gfn=Monaco\ for\ Powerline:h12
+    set gfn=Monaco:h12
     set guioptions-=T
     set guioptions-=L
     set guioptions-=r
