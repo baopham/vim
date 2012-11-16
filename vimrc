@@ -1,7 +1,8 @@
-"""""""""""""""""
-" OS:  Mac OS   "
-" GUI: MacVim   "
-"""""""""""""""""
+"""""""""""""""""""""
+" OS:  Mac OS       "
+" GUI: MacVim       "
+" Terminal: iTerm2  "
+"""""""""""""""""""""
 set nocompatible
 filetype off
 
