@@ -482,7 +482,8 @@ let g:EasyMotion_leader_key = ','
 " => TrailerTrash
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " Hide trailer highlighting as default
-au BufEnter * :HideTrailer
+let g:trailertrash_hide_on_open = 1
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => QuickRun
