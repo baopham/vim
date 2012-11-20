@@ -38,6 +38,9 @@ Bundle 'vim-scripts/YankRing.vim'
 Bundle 'othree/html5.vim'
 Bundle 'python.vim'
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Important settings
+""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on
 filetype plugin indent on
 
