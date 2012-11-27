@@ -23,6 +23,7 @@ Bundle 'mbbill/undotree'
 Bundle 'tpope/vim-markdown'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'baopham/bpm-powerline'
 Bundle 'thinca/vim-quickrun'
 Bundle 'tpope/vim-repeat'
 Bundle 'mattn/sonictemplate-vim'
@@ -511,6 +512,8 @@ if has("persistent_undo")
     set undodir=~/.vim/bundle/undotree
     set undofile
 endif
+" Custom Powerline status bar for Undotree
+let g:Powerline_theme = 'bpm'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => CtrlP
