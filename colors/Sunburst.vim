@@ -96,3 +96,9 @@ hi cssPseudoClassId ctermfg=111 ctermbg=NONE cterm=NONE guifg=#89bdff guibg=NONE
 hi cssClassName ctermfg=111 ctermbg=NONE cterm=NONE guifg=#89bdff guibg=NONE gui=NONE
 hi cssValueLength ctermfg=68 ctermbg=NONE cterm=NONE guifg=#3387cc guibg=NONE gui=NONE
 hi cssCommonAttr ctermfg=167 ctermbg=NONE cterm=NONE guifg=#cf6a4c guibg=NONE gui=NONE
+
+" Diff highlighting
+hi DiffAdd      ctermfg=black ctermbg=117 guifg=black guibg=skyblue1
+hi DiffChange   ctermfg=black ctermbg=229 guifg=black guibg=wheat1
+hi DiffDelete   ctermfg=black ctermbg=243 guifg=black guibg=gray45 gui=none
+hi DiffText     ctermfg=black ctermbg=132 guifg=black guibg=hotpink1 gui=none

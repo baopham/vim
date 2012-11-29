@@ -50,3 +50,9 @@ hi Special		guifg=#e7f6da gui=none
 
 hi MatchParen ctermfg=173 ctermbg=NONE cterm=NONE guifg=yellow guibg=NONE gui=NONE
 hi Search term=reverse ctermfg=0 ctermbg=14 guifg=Black guibg=#b3ccea
+
+" Diff highlighting
+hi DiffAdd      ctermfg=black ctermbg=117 guifg=black guibg=skyblue1
+hi DiffChange   ctermfg=black ctermbg=229 guifg=black guibg=wheat1
+hi DiffDelete   ctermfg=black ctermbg=243 guifg=black guibg=gray45 gui=none
+hi DiffText     ctermfg=black ctermbg=132 guifg=black guibg=hotpink3 gui=none
