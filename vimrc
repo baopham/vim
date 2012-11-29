@@ -157,6 +157,10 @@ map <CR> o<Esc>
 imap jk <ESC>
 imap kj <ESC>
 
+" Copy & Paste to/from system clipboard
+vmap ,y "*y
+map ,p "*p
+
 " Press space to clear search highlighting and any message already displayed.
 nnoremap <silent> <Space> :silent noh<Bar>echo<CR>
 
