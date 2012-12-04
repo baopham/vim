@@ -228,16 +228,11 @@ set number
 set undolevels=1000
 
 set splitbelow "split windows at bottom
-"set splitright "split windows on the right
 
 " Resize splits when window is resized
 au VimResized * exe "normal! \<c-w>="
 
-" let mapleader = ","
-
 set noswapfile "disable swap
-
-"set clipboard=unnamed
 
 highlight MatchParen cterm=bold ctermfg=cyan
 
@@ -438,7 +433,9 @@ else
     let g:Powerline_dividers_override = ['', [0x2b81], '', [0x2b83]]
 endif
 " Trailing whitespace segment
-call Pl#Theme#InsertSegment('ws_marker', 'after', 'lineinfo')
+if exists('*Pl#Theme#InsertSegment')
+    call Pl#Theme#InsertSegment('ws_marker', 'after', 'lineinfo')
+endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => NERDTree
