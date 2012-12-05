@@ -122,8 +122,6 @@ endif
 " => Spelling
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 set dictionary-=/usr/share/dict/words dictionary+=/usr/share/dict/words dictionary+=$HOME/.vim/spell/en.utf-8.add
-" Shortcut to get dictionary completion in insert mode with <C-N>
-set complete-=k complete+=k
 set spellsuggest=10
 highlight clear SpellBad
 highlight SpellBad term=standout ctermfg=1 term=underline cterm=underline
@@ -350,8 +348,6 @@ command! -nargs=? -range=% RetabIndent call IndentConvert(<line1>,<line2>,&et,<q
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Omnicomplete
 """"""""""""""""""""""""""""""""""""""""""""""""""""
-set ofu=syntaxcomplete#Complete
-
 " Change the 'completeopt' option so that Vim's popup menu doesn't select the first completion item,
 " but just inserts the longest common text of all matches
 set completeopt=longest,menuone,preview
@@ -371,7 +367,6 @@ autocmd FileType xml,html imap <buffer> <M-D-.> </<C-X><C-O>
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => SuperTab
 """"""""""""""""""""""""""""""""""""""""""""""""""""
-let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 " Let SuperTab decide which completion mode to use and should play well with OmniCompletion:
 let g:SuperTabDefaultCompletionType = "context"
 " Close preview window when completion is finished or canceled
