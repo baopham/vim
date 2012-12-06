@@ -53,7 +53,7 @@ set t_Co=256
 if has('mouse')
     set mouse=a
     if !has('gui_running')
-        set ttymouse=urxvt
+        set ttymouse=xterm2
     endif
 endif
 
