@@ -286,7 +286,6 @@ command CDC cd %:p:h
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 set autoindent
 set expandtab
-set tabstop=4
 set shiftwidth=4
 set numberwidth=4
 set softtabstop=4
