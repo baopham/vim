@@ -387,7 +387,7 @@ let g:tagbar_width = 31
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Yankring
 """"""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <silent> \y :YRShow<CR>
+nnoremap <leader>y :YRShow<CR>
 let g:yankring_dot_repeat_yank = 1
 let g:yankring_history_file = '.vim/bundle/YankRing.vim/yankring_history'
 
@@ -434,7 +434,7 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " Open NerdTree automatically when vim starts up and no files are specified
 " autocmd vimenter * if !argc() | NERDTree | endif
-"Close vim if NerdTree is the only window left
+" Close vim if NerdTree is the only window left
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 let NERDTreeChDirMode=2
 " 1 click to open dir node, 2 clicks to open file
