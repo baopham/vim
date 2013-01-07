@@ -230,8 +230,6 @@ set splitbelow "split windows at bottom
 " Resize splits when window is resized
 au VimResized * exe "normal! \<c-w>="
 
-set noswapfile "disable swap
-
 highlight MatchParen cterm=bold ctermfg=cyan
 
 " Search for selected text, forwards or backwards {{{
@@ -280,6 +278,25 @@ highlight MatchParen cterm=bold ctermfg=cyan
 
 " Command to change to directory of the current file
 command CDC cd %:p:h
+
+" Swap, backup, undo  {{{
+    " Try `mkdir -p ~/.cache/vim/{swap,backup,undo}` if the directories don't
+    " already exists
+    if isdirectory(expand('~/.cache/vim'))
+      if &directory =~# '^\.,'
+        set directory^=~/.cache/vim/swap//
+      endif
+      if &backupdir =~# '^\.,'
+        set backupdir^=~/.cache/vim/backup//
+      endif
+      if exists('+undodir') && &undodir =~# '^\.\%(,\|$\)'
+        set undodir^=~/.cache/vim/undo//
+      endif
+    endif
+    if exists('+undofile')
+      set undofile
+    endif
+" }}}
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Tab and indentation
@@ -499,10 +516,6 @@ nnoremap <leader>u :UndotreeToggle<CR>
 let g:undotree_SetFocusWhenToggle = 1
 let g:undotree_DiffAutoOpen = 0
 let g:undotree_SplitWidth = 40
-if has("persistent_undo")
-    set undodir=~/.vim/bundle/undotree
-    set undofile
-endif
 " Custom Powerline status bar for Undotree
 let g:Powerline_theme = 'bpm'
 
