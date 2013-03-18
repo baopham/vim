@@ -22,8 +22,6 @@ Bundle 'gregsexton/gitv'
 Bundle 'mbbill/undotree'
 Bundle 'tpope/vim-markdown'
 Bundle 'scrooloose/nerdtree'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'baopham/bpm-powerline'
 Bundle 'thinca/vim-quickrun'
 Bundle 'tpope/vim-repeat'
 Bundle 'mattn/sonictemplate-vim'
@@ -95,7 +93,7 @@ colo Sunburst
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 if has("gui_running")
     colo wombat
-    set gfn=Monaco:h12
+    set gfn=Monaco\ for\ Powerline:h12
     set guioptions-=T
     set guioptions-=L
     set guioptions-=r
@@ -426,24 +424,11 @@ let g:gist_open_browser_after_post = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Powerline
 """"""""""""""""""""""""""""""""""""""""""""""""""""
-let g:Powerline_stl_path_style = 'filename'
+set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim
 
-if has('gui_running')
-    let g:Powerline_symbols = 'fancy'
-else
-    " Overriding symbols
-    let g:Powerline_symbols_override = {
-        \   'BRANCH': [0x2b60]
-        \ , 'RO'    : [0x2b64]
-        \ , 'FT'    : [0x2b62, 0x2b63]
-        \ , 'LINE'  : [0x2b61]
-    \}
-    " Overriding dividers
-    let g:Powerline_dividers_override = ['', [0x2b81], '', [0x2b83]]
-endif
-" Trailing whitespace segment
-if exists('*Pl#Theme#InsertSegment')
-    call Pl#Theme#InsertSegment('ws_marker', 'after', 'lineinfo')
+" Powerline's hard dividers don't look so good in iTerm with some transparency
+if !has('gui_running')
+    let g:powerline_config_overrides = {"common":{ "dividers": { "left": { "hard": ' ' }, "right": { "hard" : ' '}}}}
 endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
