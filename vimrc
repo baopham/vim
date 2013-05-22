@@ -36,6 +36,7 @@ Bundle 'mattn/webapi-vim'
 Bundle 'vim-scripts/YankRing.vim'
 Bundle 'othree/html5.vim'
 Bundle 'python.vim'
+Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Important settings
@@ -434,8 +435,6 @@ let g:gist_open_browser_after_post = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Powerline
 """"""""""""""""""""""""""""""""""""""""""""""""""""
-set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim
-
 " Powerline's hard dividers don't look so good in iTerm with some transparency
 if !has('gui_running')
     let g:powerline_config_overrides = {"common":{ "dividers": { "left": { "hard": ' ' }, "right": { "hard" : ' '}}}}
@@ -511,8 +510,6 @@ nnoremap <leader>u :UndotreeToggle<CR>
 let g:undotree_SetFocusWhenToggle = 1
 let g:undotree_DiffAutoOpen = 0
 let g:undotree_SplitWidth = 40
-" Custom Powerline status bar for Undotree
-let g:Powerline_theme = 'bpm'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => CtrlP
