@@ -36,6 +36,7 @@ Bundle 'mattn/webapi-vim'
 Bundle 'vim-scripts/YankRing.vim'
 Bundle 'othree/html5.vim'
 Bundle 'python.vim'
+Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Important settings
@@ -79,13 +80,12 @@ colo Sunburst
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 if has("gui_running")
     colo wombat
-    set gfn=Monaco\ for\ Powerline:h12
+    set gfn=Menlo\ for\ Powerline
     set guioptions-=T
     set guioptions-=L
     set guioptions-=r
     set showtabline=2 "always show tabs
     set lines=73 columns=212
-    set macmeta
 
     let g:tagbar_iconchars = ['▸', '▾']
 
@@ -93,6 +93,9 @@ if has("gui_running")
     map <SwipeRight> gt
     imap <SwipeLeft> <Esc>gT<CR>
     imap <SwipeRight> <Esc>gt<CR>
+
+    map <M-{> gT
+    map <M-}> gt
 
     " Turn on/off transparency
     map <Leader>trn :set transparency=8<CR>
@@ -120,15 +123,15 @@ highlight SpellLocal term=underline cterm=underline
 " => KeyMaps
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " Use numbers to pick the tab you want (like iTerm)
-map <silent> <D-1> :tabn 1<cr>
-map <silent> <D-2> :tabn 2<cr>
-map <silent> <D-3> :tabn 3<cr>
-map <silent> <D-4> :tabn 4<cr>
-map <silent> <D-5> :tabn 5<cr>
-map <silent> <D-6> :tabn 6<cr>
-map <silent> <D-7> :tabn 7<cr>
-map <silent> <D-8> :tabn 8<cr>
-map <silent> <D-9> :tabn 9<cr>
+map <silent> <M-1> :tabn 1<cr>
+map <silent> <M-2> :tabn 2<cr>
+map <silent> <M-3> :tabn 3<cr>
+map <silent> <M-4> :tabn 4<cr>
+map <silent> <M-5> :tabn 5<cr>
+map <silent> <M-6> :tabn 6<cr>
+map <silent> <M-7> :tabn 7<cr>
+map <silent> <M-8> :tabn 8<cr>
+map <silent> <M-9> :tabn 9<cr>
 
 " Insert newline below cursor: press Enter
 " Insert newline before cursor: press Shift+Enter
@@ -432,16 +435,6 @@ let g:gist_detect_filetype = 1
 let g:gist_open_browser_after_post = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
-" => Powerline
-""""""""""""""""""""""""""""""""""""""""""""""""""""
-set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim
-
-" Powerline's hard dividers don't look so good in iTerm with some transparency
-if !has('gui_running')
-    let g:powerline_config_overrides = {"common":{ "dividers": { "left": { "hard": ' ' }, "right": { "hard" : ' '}}}}
-endif
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => NERDTree
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " Open NerdTree automatically when vim starts up and no files are specified
@@ -456,7 +449,7 @@ let NERDTreeShowBookmarks=1
 let NERDTreeIgnore=['\.pyc$', '\~$']
 let NERDTreeStatusline = "%{getcwd()}"
 " Cmd-Shift-N for nerd tree
-nmap <D-N> :NERDTreeToggle<CR>
+nmap <M-N> :NERDTreeToggle<CR>
 " Open the project tree and expose current file in the nerdtree with Ctrl-\
 nnoremap <silent> <C-\> :NERDTreeFind<CR>
 
@@ -475,8 +468,8 @@ let g:ruby_path ='$HOME/.rvm/rubies/default/bin'
 " => tComment
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " Command-/ to toggle comments
-map <D-/> :TComment<CR>
-imap <D-/> <Esc>:TComment<CR>i
+map <M-/> :TComment<CR>
+imap <M-/> <Esc>:TComment<CR>i
 " Don't comment blank lines
 let g:tcommentBlankLines = 0
 
@@ -511,8 +504,6 @@ nnoremap <leader>u :UndotreeToggle<CR>
 let g:undotree_SetFocusWhenToggle = 1
 let g:undotree_DiffAutoOpen = 0
 let g:undotree_SplitWidth = 40
-" Custom Powerline status bar for Undotree
-let g:Powerline_theme = 'bpm'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => CtrlP
