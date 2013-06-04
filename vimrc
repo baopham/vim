@@ -37,6 +37,9 @@ Bundle 'vim-scripts/YankRing.vim'
 Bundle 'othree/html5.vim'
 Bundle 'python.vim'
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Bundle 'amiorin/ctrlp-z'
+Bundle 'xolox/vim-easytags'
+Bundle 'xolox/vim-misc'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Important settings
@@ -211,6 +214,8 @@ set number
 set undolevels=1000
 
 set splitbelow "split windows at bottom
+
+set tags=.tags;$HOME
 
 " Resize splits when window is resized
 au VimResized * exe "normal! \<c-w>="
@@ -520,3 +525,15 @@ let g:ctrlp_clear_cache_on_exit = 0
 set wildignore+=.git/*,.hg/*,.svn/*
 let g:ctrlp_dotfiles = 0
 let g:ctrlp_max_files = 1000
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => CtrlP-Z
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:ctrlp_z_nerdtree = 1
+let g:ctrlp_extensions = ['Z', 'F']
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => EasyTags
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:easytags_dynamic_files = 1
+let g:easytags_cmd = '/usr/local/bin/ctags -f .tags'
