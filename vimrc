@@ -532,6 +532,8 @@ let g:ctrlp_max_files = 1000
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ctrlp_z_nerdtree = 1
 let g:ctrlp_extensions = ['Z', 'F']
+nnoremap sz :CtrlPZ<Cr>
+nnoremap sf :CtrlPF<Cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => EasyTags
