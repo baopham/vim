@@ -84,28 +84,28 @@ colo Sunburst
 " => GUI MacVim
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 if has("gui_running")
-    colo wombat
-    set gfn=Monaco\ for\ Powerline:h12
-    set guioptions-=T
-    set guioptions-=L
-    set guioptions-=r
-    set showtabline=2 "always show tabs
-    set lines=73 columns=212
-    set macmeta
+  colo wombat
+  set gfn=Monaco\ for\ Powerline:h12
+  set guioptions-=T
+  set guioptions-=L
+  set guioptions-=r
+  set showtabline=2 "always show tabs
+  set lines=73 columns=212
+  set macmeta
 
-    let g:tagbar_iconchars = ['▸', '▾']
+  let g:tagbar_iconchars = ['▸', '▾']
 
-    map <SwipeLeft> gT
-    map <SwipeRight> gt
-    imap <SwipeLeft> <Esc>gT<CR>
-    imap <SwipeRight> <Esc>gt<CR>
+  map <SwipeLeft> gT
+  map <SwipeRight> gt
+  imap <SwipeLeft> <Esc>gT<CR>
+  imap <SwipeRight> <Esc>gt<CR>
 
-    " Turn on/off transparency
-    map <Leader>trn :set transparency=8<CR>
-    map <Leader>trf :set transparency=0<CR>
+  " Turn on/off transparency
+  map <Leader>trn :set transparency=8<CR>
+  map <Leader>trf :set transparency=0<CR>
 
-    " Show tab number
-    autocmd VimEnter * set guitablabel=%M\ %t\ \⌘%N
+  " Show tab number
+  autocmd VimEnter * set guitablabel=%M\ %t\ \⌘%N
 endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
@@ -174,14 +174,14 @@ imap <c-e><c-l> <right>
 imap <c-e><c-h> <left>
 
 " Easy resizing split windows {{{
-    if bufwinnr(1)
-        " Horizontal split windows
-        nnoremap <silent> + <C-w>+<C-w>+
-        nnoremap <silent> - <C-w>-<C-w>-
-        " Vertical split windows
-        nnoremap <silent> > <C-w>><C-w>>
-        nnoremap <silent> < <C-w><<C-w><
-    endif
+  if bufwinnr(1)
+    " Horizontal split windows
+    nnoremap <silent> + <C-w>+<C-w>+
+    nnoremap <silent> - <C-w>-<C-w>-
+    " Vertical split windows
+    nnoremap <silent> > <C-w>><C-w>>
+    nnoremap <silent> < <C-w><<C-w><
+  endif
 " }}}
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
@@ -225,45 +225,45 @@ au VimResized * exe "normal! \<c-w>="
 highlight MatchParen cterm=bold ctermfg=cyan
 
 " Search for selected text, forwards or backwards {{{
-    " Press * to search forwards
-    vnoremap <silent> * :<C-U>
-      \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
-      \gvy/<C-R><C-R>=substitute(
-      \escape(@", '/\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
-      \gV:call setreg('"', old_reg, old_regtype)<CR>
-    " Press # to search backwards
-    vnoremap <silent> # :<C-U>
-      \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
-      \gvy?<C-R><C-R>=substitute(
-      \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
-      \gV:call setreg('"', old_reg, old_regtype)<CR>
+  " Press * to search forwards
+  vnoremap <silent> * :<C-U>
+    \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
+    \gvy/<C-R><C-R>=substitute(
+    \escape(@", '/\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
+    \gV:call setreg('"', old_reg, old_regtype)<CR>
+  " Press # to search backwards
+  vnoremap <silent> # :<C-U>
+    \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
+    \gvy?<C-R><C-R>=substitute(
+    \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
+    \gV:call setreg('"', old_reg, old_regtype)<CR>
 " }}}
 
 " Git config {{{
-    " Spell check Git commit message
-    autocmd BufRead COMMIT_EDITMSG setlocal spell!
+  " Spell check Git commit message
+  autocmd BufRead COMMIT_EDITMSG setlocal spell!
 " }}}
 
 " Command to change to directory of the current file
 command CDC cd %:p:h
 
 " Swap, backup, undo  {{{
-    " Try `mkdir -p ~/.cache/vim/{swap,backup,undo}` if the directories don't
-    " already exists
-    if isdirectory(expand('~/.cache/vim'))
-      if &directory =~# '^\.,'
-        set directory^=~/.cache/vim/swap//
-      endif
-      if &backupdir =~# '^\.,'
-        set backupdir^=~/.cache/vim/backup//
-      endif
-      if exists('+undodir') && &undodir =~# '^\.\%(,\|$\)'
-        set undodir^=~/.cache/vim/undo//
-      endif
+  " Try `mkdir -p ~/.cache/vim/{swap,backup,undo}` if the directories don't
+  " already exists
+  if isdirectory(expand('~/.cache/vim'))
+    if &directory =~# '^\.,'
+      set directory^=~/.cache/vim/swap//
     endif
-    if exists('+undofile')
-      set undofile
+    if &backupdir =~# '^\.,'
+      set backupdir^=~/.cache/vim/backup//
     endif
+    if exists('+undodir') && &undodir =~# '^\.\%(,\|$\)'
+      set undodir^=~/.cache/vim/undo//
+    endif
+  endif
+  if exists('+undofile')
+    set undofile
+  endif
 " }}}
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
@@ -300,78 +300,78 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " Convert tabs/spaces {{{ 
 
-    " Return indent (all whitespace at start of a line), converted from
-    " tabs to spaces if what = 1, or from spaces to tabs otherwise.
-    " When converting to tabs, result has no redundant spaces.
-    function! Indenting(indent, what, cols)
-      let spccol = repeat(' ', a:cols)
-      let result = substitute(a:indent, spccol, '\t', 'g')
-      let result = substitute(result, ' \+\ze\t', '', 'g')
-      if a:what == 1
-        let result = substitute(result, '\t', spccol, 'g')
-      endif
-      return result
-    endfunction
+  " Return indent (all whitespace at start of a line), converted from
+  " tabs to spaces if what = 1, or from spaces to tabs otherwise.
+  " When converting to tabs, result has no redundant spaces.
+  function! Indenting(indent, what, cols)
+    let spccol = repeat(' ', a:cols)
+    let result = substitute(a:indent, spccol, '\t', 'g')
+    let result = substitute(result, ' \+\ze\t', '', 'g')
+    if a:what == 1
+      let result = substitute(result, '\t', spccol, 'g')
+    endif
+    return result
+  endfunction
 
-    " Convert whitespace used for indenting (before first non-whitespace).
-    " what = 0 (convert spaces to tabs), or 1 (convert tabs to spaces).
-    " cols = string with number of columns per tab, or empty to use 'tabstop'.
-    " The cursor position is restored, but the cursor will be in a different
-    " column when the number of characters in the indent of the line is changed.
-    function! IndentConvert(line1, line2, what, cols)
-      let savepos = getpos('.')
-      let cols = empty(a:cols) ? &tabstop : a:cols
-      execute a:line1 . ',' . a:line2 . 's/^\s\+/\=Indenting(submatch(0), a:what, cols)/e'
-      call histdel('search', -1)
-      call setpos('.', savepos)
-    endfunction
-    command! -nargs=? -range=% Space2Tab call IndentConvert(<line1>,<line2>,0,<q-args>)
-    command! -nargs=? -range=% Tab2Space call IndentConvert(<line1>,<line2>,1,<q-args>)
-    command! -nargs=? -range=% RetabIndent call IndentConvert(<line1>,<line2>,&et,<q-args>)
+  " Convert whitespace used for indenting (before first non-whitespace).
+  " what = 0 (convert spaces to tabs), or 1 (convert tabs to spaces).
+  " cols = string with number of columns per tab, or empty to use 'tabstop'.
+  " The cursor position is restored, but the cursor will be in a different
+  " column when the number of characters in the indent of the line is changed.
+  function! IndentConvert(line1, line2, what, cols)
+    let savepos = getpos('.')
+    let cols = empty(a:cols) ? &tabstop : a:cols
+    execute a:line1 . ',' . a:line2 . 's/^\s\+/\=Indenting(submatch(0), a:what, cols)/e'
+    call histdel('search', -1)
+    call setpos('.', savepos)
+  endfunction
+  command! -nargs=? -range=% Space2Tab call IndentConvert(<line1>,<line2>,0,<q-args>)
+  command! -nargs=? -range=% Tab2Space call IndentConvert(<line1>,<line2>,1,<q-args>)
+  command! -nargs=? -range=% RetabIndent call IndentConvert(<line1>,<line2>,&et,<q-args>)
 
 " }}}
 
 " Vim info {{{
 
-    " Tell vim to remember certain things when we exit
-    "  '10  :  marks will be remembered for up to 10 previously edited files
-    "  "100 :  will save up to 100 lines for each register
-    "  :20  :  up to 20 lines of command-line history will be remembered
-    "  %    :  saves and restores the buffer list
-    "  n... :  where to save the viminfo files
-    set viminfo='10,\"100,:20,%,n~/.viminfo
-    function! ResCur()
-          if line("'\"") <= line("$")
-                normal! g`"
-                return 1
-          endif
-    endfunction
+  " Tell vim to remember certain things when we exit
+  "  '10  :  marks will be remembered for up to 10 previously edited files
+  "  "100 :  will save up to 100 lines for each register
+  "  :20  :  up to 20 lines of command-line history will be remembered
+  "  %    :  saves and restores the buffer list
+  "  n... :  where to save the viminfo files
+  set viminfo='10,\"100,:20,%,n~/.viminfo
+  function! ResCur()
+    if line("'\"") <= line("$")
+      normal! g`"
+      return 1
+    endif
+  endfunction
 
 " }}}
 
 " Swap split windows {{{
 
-    function! MarkWindowSwap()
-        let g:markedWinNum = winnr()
-    endfunction
+  function! MarkWindowSwap()
+    let g:markedWinNum = winnr()
+  endfunction
 
-    function! DoWindowSwap()
-        "Mark destination
-        let curNum = winnr()
-        let curBuf = bufnr( "%" )
-        exe g:markedWinNum . "wincmd w"
-        "Switch to source and shuffle dest->source
-        let markedBuf = bufnr( "%" )
-        "Hide and open so that we aren't prompted and keep history
-        exe 'hide buf' curBuf
-        "Switch to dest and shuffle source->dest
-        exe curNum . "wincmd w"
-        "Hide and open so that we aren't prompted and keep history
-        exe 'hide buf' markedBuf
-    endfunction
+  function! DoWindowSwap()
+    "Mark destination
+    let curNum = winnr()
+    let curBuf = bufnr( "%" )
+    exe g:markedWinNum . "wincmd w"
+    "Switch to source and shuffle dest->source
+    let markedBuf = bufnr( "%" )
+    "Hide and open so that we aren't prompted and keep history
+    exe 'hide buf' curBuf
+    "Switch to dest and shuffle source->dest
+    exe curNum . "wincmd w"
+    "Hide and open so that we aren't prompted and keep history
+    exe 'hide buf' markedBuf
+  endfunction
 
-    nmap <silent> <leader>mw :call MarkWindowSwap()<CR>
-    nmap <silent> <leader>sw :call DoWindowSwap()<CR>
+  nmap <silent> <leader>mw :call MarkWindowSwap()<CR>
+  nmap <silent> <leader>sw :call DoWindowSwap()<CR>
 
 " }}}
 
