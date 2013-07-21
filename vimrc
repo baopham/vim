@@ -41,6 +41,7 @@ Bundle 'amiorin/ctrlp-z'
 Bundle 'xolox/vim-easytags'
 Bundle 'xolox/vim-misc'
 Bundle 'baopham/linepower.vim'
+Bundle 'aaronbieber/quicktask'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Important settings
@@ -540,3 +541,8 @@ nnoremap sf :CtrlPF<Cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 let g:easytags_dynamic_files = 1
 let g:easytags_cmd = '/usr/local/bin/ctags -f .tags'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => QuickTask
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:quicktask_autosave = 1
