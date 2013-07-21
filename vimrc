@@ -277,6 +277,7 @@ set softtabstop=4
 "set smartindent
 autocmd FileType ruby setlocal expandtab sta sw=2 sts=2
 autocmd FileType php setlocal expandtab sta sw=2 sts=2
+autocmd FileType vim setlocal expandtab sta sw=2 sts=2
 au FileType xml exe ":silent 1,$!XMLLINT_INDENT='    ' xmllint --format --recover - 2>/dev/null"
 set backspace=indent,eol,start
 
