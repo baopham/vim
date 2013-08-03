@@ -219,6 +219,9 @@ set splitbelow "split windows at bottom
 
 set tags=.tags;$HOME
 
+" Display help in vertical split window
+cnoremap help vert help
+
 " Resize splits when window is resized
 au VimResized * exe "normal! \<c-w>="
 
