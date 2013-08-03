@@ -222,6 +222,9 @@ set tags=.tags;$HOME
 " Display help in vertical split window
 cnoremap help vert help
 
+" Display tag in a vertical split window
+map <C-]> :rightbelow vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+
 " Resize splits when window is resized
 au VimResized * exe "normal! \<c-w>="
 
