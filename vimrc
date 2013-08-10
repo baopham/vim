@@ -41,7 +41,6 @@ Bundle 'amiorin/ctrlp-z'
 Bundle 'xolox/vim-easytags'
 Bundle 'xolox/vim-misc'
 Bundle 'baopham/linepower.vim'
-Bundle 'aaronbieber/quicktask'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Important settings
