@@ -219,7 +219,7 @@ set splitbelow "split windows at bottom
 set tags=.tags;$HOME
 
 " Display help in vertical split window
-cnoremap help vert help
+command -nargs=* -complete=help Help vertical belowright help <args>
 
 " Display tag in a vertical split window
 map <C-\> :rightbelow vsp <CR>:exec("tag ".expand("<cword>"))<CR>
