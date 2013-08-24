@@ -19,7 +19,7 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'tpope/vim-fugitive'
 Bundle 'mattn/gist-vim'
 Bundle 'gregsexton/gitv'
-Bundle 'mbbill/undotree'
+Bundle 'sjl/gundo.vim'
 Bundle 'tpope/vim-markdown'
 Bundle 'scrooloose/nerdtree'
 Bundle 'thinca/vim-quickrun'
@@ -525,12 +525,10 @@ silent! nnoremap <unique> <silent> <Leader>rv :QuickRun -outputter/buffer/split 
 let g:Gitv_DoNotMapCtrlKey = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
-" => Undotree
+" => Gundo
 """"""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <leader>u :UndotreeToggle<CR>
-let g:undotree_SetFocusWhenToggle = 1
-let g:undotree_DiffAutoOpen = 0
-let g:undotree_SplitWidth = 40
+nnoremap <leader>u :GundoToggle<CR>:silent set cursorline!<Bar>echo<CR>
+let g:gundo_playback_delay = 1200
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => CtrlP
