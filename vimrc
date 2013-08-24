@@ -511,7 +511,6 @@ let g:EasyMotion_leader_key = ','
 " Hide trailer highlighting as default
 let g:trailertrash_hide_on_open = 1
 
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => QuickRun
 """"""""""""""""""""""""""""""""""""""""""""""""""""
@@ -554,8 +553,3 @@ nnoremap sf :CtrlPF<Cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 let g:easytags_dynamic_files = 1
 let g:easytags_cmd = '/usr/local/bin/ctags -f .tags'
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => QuickTask
-""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:quicktask_autosave = 1
