@@ -54,24 +54,24 @@ set encoding=utf-8
 set t_Co=256
 
 if has('mouse')
-    set mouse=a
-    if !has('gui_running')
-        set ttymouse=xterm2
-    endif
+  set mouse=a
+  if !has('gui_running')
+      set ttymouse=xterm2
+  endif
 endif
 
 if exists('+autochdir')
-    set autochdir
+  set autochdir
 else
-    autocmd BufEnter * silent! lcd %:p:h:gs/ /\\ /
+  autocmd BufEnter * silent! lcd %:p:h:gs/ /\\ /
 endif
 
 " Disable bell
 set visualbell
 
 augroup ResCur
-    autocmd!
-    autocmd BufWinEnter * call ResCur()
+  autocmd!
+  autocmd BufWinEnter * call ResCur()
 augroup END
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
@@ -404,7 +404,7 @@ let OmniCpp_ShowAccess = 1
 
 " Insert HTML/XML close tag with Option+Command+.
 if has('gui_running')
-    autocmd FileType xml,html setlocal macmeta " required for MacVim
+  autocmd FileType xml,html setlocal macmeta " required for MacVim
 endif
 autocmd FileType xml,html imap <buffer> <M-D-.> </<C-X><C-O>
 
@@ -458,7 +458,7 @@ let g:gist_open_browser_after_post = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " Powerline's hard dividers don't look so good in iTerm with some transparency
 if !has('gui_running')
-    let g:powerline_config_overrides = {"common":{ "dividers": { "left": { "hard": ' ' }, "right": { "hard" : ' '}}}}
+  let g:powerline_config_overrides = {"common":{ "dividers": { "left": { "hard": ' ' }, "right": { "hard" : ' '}}}}
 endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
