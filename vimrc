@@ -40,7 +40,6 @@ Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Bundle 'amiorin/ctrlp-z'
 Bundle 'xolox/vim-easytags'
 Bundle 'xolox/vim-misc'
-Bundle 'baopham/linepower.vim'
 Bundle 'baopham/vim-nerdtree-unfocus'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
