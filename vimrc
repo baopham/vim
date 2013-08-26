@@ -36,7 +36,8 @@ Bundle 'mattn/webapi-vim'
 Bundle 'vim-scripts/YankRing.vim'
 Bundle 'othree/html5.vim'
 Bundle 'python.vim'
-Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+"Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Bundle 'bling/vim-airline'
 Bundle 'amiorin/ctrlp-z'
 Bundle 'xolox/vim-easytags'
 Bundle 'xolox/vim-misc'
@@ -456,8 +457,15 @@ let g:gist_detect_filetype = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " Powerline's hard dividers don't look so good in iTerm with some transparency
 if !has('gui_running')
-  let g:powerline_config_overrides = {"common":{ "dividers": { "left": { "hard": ' ' }, "right": { "hard" : ' '}}}}
+  let g:airline_left_sep = ''
+  let g:airline_right_sep = ''
 endif
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'powerlineish'
+" Add a separator between file encoding and file format
+let g:airline_section_y = "%{strlen(&fenc)>0?&fenc:'  '}%{strlen(&ff)>0?'   '.&ff:''}"
+" Add a separator between percentage and line, column number
+let g:airline_section_z = '%3p%%  %3l:%3c'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => NERDTree
