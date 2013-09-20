@@ -216,7 +216,7 @@ set undolevels=1000
 
 set splitbelow "split windows at bottom
 
-set tags=.tags;$HOME
+set tags^=./.tags
 
 " Display help in vertical split window
 command -nargs=* -complete=help Help vertical belowright help <args>
@@ -553,5 +553,5 @@ nnoremap sf :CtrlPF<Cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => EasyTags
 """"""""""""""""""""""""""""""""""""""""""""""""""""
-let g:easytags_dynamic_files = 1
+let g:easytags_dynamic_files = 2
 let g:easytags_cmd = '/usr/local/bin/ctags -f .tags'
