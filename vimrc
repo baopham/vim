@@ -41,6 +41,7 @@ Bundle 'amiorin/ctrlp-z'
 Bundle 'xolox/vim-easytags'
 Bundle 'xolox/vim-misc'
 Bundle 'baopham/vim-nerdtree-unfocus'
+Bundle 'gmarik/sudo-gui.vim'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Important settings
@@ -186,13 +187,12 @@ imap <c-e><c-h> <left>
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Alias
 """"""""""""""""""""""""""""""""""""""""""""""""""""
-cnoreabbrev W w
-cnoreabbrev Q q
-cnoreabbrev Wq wq
+cnoreabbrev <expr> W (getcmdtype() is# ':' && getcmdline() is# 'W' && getchar(1) isnot char2nr('!')) ? 'w' : 'W'
+cnoreabbrev <expr> Q (getcmdtype() is# ':' && getcmdline() is# 'Q') ? 'q' : 'Q'
+cnoreabbrev <expr> Wq (getcmdtype() is# ':' && getcmdline() is# 'Wq') ? 'wq' : 'Wq'
 cnoreabbrev Tabnew tabnew
 cnoreabbrev TAbnew tabnew
 cnoreabbrev tAbnew tabnew
-cmap w!! w !sudo tee > /dev/null %
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Miscellaneous
