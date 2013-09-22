@@ -481,7 +481,7 @@ let NERDTreeMouseMode=2
 " Always show bookmarks
 let NERDTreeShowBookmarks=1
 let NERDTreeIgnore=['\.pyc$', '\~$']
-let NERDTreeStatusline = "%{getcwd()}"
+let NERDTreeStatusline = "%{substitute(getcwd(), $HOME, '~', '')}"
 " Cmd-Shift-N for nerd tree
 nmap <D-N> :NERDTreeToggle<CR>
 " Open the project tree and expose current file in the nerdtree with Ctrl-\
