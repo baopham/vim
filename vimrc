@@ -464,8 +464,6 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme = 'powerlineish'
 " Add a separator between file encoding and file format
 let g:airline_section_y = "%{strlen(&fenc)>0?&fenc:'  '}%{strlen(&ff)>0?'   '.&ff:''}"
-" Add a separator between percentage and line, column number
-let g:airline_section_z = '%3p%%  %3l:%3c'
 " Format for trailing and mixed indent warning
 let g:airline#extensions#whitespace#trailing_format = 'trailing:%s'
 let g:airline#extensions#whitespace#mixed_indent_format = 'mixed-indent:%s'
