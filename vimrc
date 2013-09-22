@@ -450,8 +450,6 @@ let g:gist_get_multiplefile = 1
 let g:gist_clip_command = 'pbcopy'
 " Detect filetype from filename
 let g:gist_detect_filetype = 1
-" Open browser after posting
-let g:gist_open_browser_after_post = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Powerline
