@@ -468,6 +468,8 @@ let g:airline_section_y = "%{strlen(&fenc)>0?&fenc:'  '}%{strlen(&ff)>0?'   '
 let g:airline#extensions#whitespace#trailing_format = 'trailing:%s'
 let g:airline#extensions#whitespace#mixed_indent_format = 'mixed-indent:%s'
 
+call airline#parts#define_raw('file2', '%f%{ &mod ? " + " : "" }')
+let g:airline_section_c = airline#section#create(['%<', 'file2', ' ', 'readonly'])
 " Override colorscheme for powerlineish theme to look more like powerline
 " TODO: modify the right handside color too
 let g:airline_theme_patch_func = 'AirlineThemePatch'
