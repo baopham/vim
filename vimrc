@@ -468,6 +468,32 @@ let g:airline_section_y = "%{strlen(&fenc)>0?&fenc:'  '}%{strlen(&ff)>0?'   '
 let g:airline#extensions#whitespace#trailing_format = 'trailing:%s'
 let g:airline#extensions#whitespace#mixed_indent_format = 'mixed-indent:%s'
 
+" Override colorscheme for powerlineish theme to look more like powerline
+" TODO: modify the right handside color too
+let g:airline_theme_patch_func = 'AirlineThemePatch'
+function! AirlineThemePatch(palette)
+  if g:airline_theme == 'powerlineish'
+    " fg: light gray & bg: med gray
+    let a:palette['normal']['airline_b'][0] = '#b2b2b2'
+    let a:palette['normal']['airline_b'][1] = '#444444'
+    let a:palette['normal']['airline_b'][2] = 250
+    let a:palette['normal']['airline_b'][3] = 238
+
+    " bg: dark gray
+    let a:palette['normal']['airline_c'][1] = '#303030'
+    let a:palette['normal']['airline_x'][1] = '#303030'
+    let a:palette['normal']['airline_y'][1] = '#444444'
+
+    " fg: white
+    let a:palette['insert']['airline_b'][0] = '#ffffff'
+    let a:palette['insert']['airline_b'][2] = 231
+
+    " fg: white
+    let a:palette['insert']['airline_c'][0] = '#ffffff'
+    let a:palette['insert']['airline_c'][2] = 231
+  endif
+endfunction
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => NERDTree
 """"""""""""""""""""""""""""""""""""""""""""""""""""
