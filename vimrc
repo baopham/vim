@@ -313,7 +313,7 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Functions
 """"""""""""""""""""""""""""""""""""""""""""""""""""
-" Convert tabs/spaces {{{ 
+" Convert tabs/spaces {{{
 
   " Return indent (all whitespace at start of a line), converted from
   " tabs to spaces if what = 1, or from spaces to tabs otherwise.
