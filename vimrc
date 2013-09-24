@@ -36,8 +36,8 @@ Bundle 'mattn/webapi-vim'
 Bundle 'vim-scripts/YankRing.vim'
 Bundle 'othree/html5.vim'
 Bundle 'python.vim'
-"Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Bundle 'bling/vim-airline'
+Bundle 'baopham/vim-airline-bpm'
 Bundle 'amiorin/ctrlp-z'
 Bundle 'xolox/vim-easytags'
 Bundle 'xolox/vim-misc'
@@ -451,66 +451,6 @@ let g:gist_get_multiplefile = 1
 let g:gist_clip_command = 'pbcopy'
 " Detect filetype from filename
 let g:gist_detect_filetype = 1
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Powerline
-""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Powerline's hard dividers don't look so good in iTerm with some transparency
-if !has('gui_running')
-  let g:airline_left_sep = ''
-  let g:airline_right_sep = ''
-endif
-let g:airline_powerline_fonts = 1
-let g:airline_theme = 'powerlineish'
-" Add a separator between file encoding and file format
-let g:airline_section_y = "%{strlen(&fenc)>0?&fenc:'  '}%{strlen(&ff)>0?'   '.&ff:''}"
-" Format for trailing and mixed indent warning
-let g:airline#extensions#whitespace#trailing_format = 'trailing:%s'
-let g:airline#extensions#whitespace#mixed_indent_format = 'mixed-indent:%s'
-
-call airline#parts#define_raw('file2', '%f%{ &mod ? " + " : "" }')
-let g:airline_section_c = airline#section#create(['%<', 'file2', ' ', 'readonly'])
-" Override colorscheme for powerlineish theme to look more like powerline
-" TODO: modify the right handside color too
-let g:airline_theme_patch_func = 'AirlineThemePatch'
-function! AirlineThemePatch(palette)
-  if g:airline_theme == 'powerlineish'
-    let s:gui_white = '#ffffff'
-    let s:cterm_white = '231'
-    let s:gui_dark = '#121212'
-    let s:cterm_dark = '233'
-    let s:gui_dark_gray = '#303030'
-    let s:cterm_dark_gray = 236
-    let s:gui_light_gray = '#b2b2b2'
-    let s:cterm_light_gray = 250
-    let s:gui_med_gray_hi = '#444444'
-    let s:cterm_med_gray_hi = 238
-    let s:gui_orange = '#d7af5f'
-    let s:cterm_orange = 179
-
-    let a:palette['normal']['airline_b'][0] = s:gui_light_gray
-    let a:palette['normal']['airline_b'][1] = s:gui_med_gray_hi
-    let a:palette['normal']['airline_b'][2] = s:cterm_light_gray
-    let a:palette['normal']['airline_b'][3] = s:cterm_med_gray_hi
-
-    let a:palette['normal']['airline_c'][1] = s:gui_dark_gray
-    let a:palette['normal']['airline_x'][1] = s:gui_dark_gray
-    let a:palette['normal']['airline_y'][1] = s:gui_med_gray_hi
-
-    let a:palette['insert']['airline_b'][0] = s:gui_white
-    let a:palette['insert']['airline_b'][2] = s:cterm_white
-
-    let a:palette['insert']['airline_c'][0] = s:gui_white
-    let a:palette['insert']['airline_c'][2] = s:cterm_white
-
-    let s:IA1 = [s:gui_light_gray, s:gui_dark_gray, s:cterm_light_gray, s:cterm_dark_gray, '']
-    let s:IA3 = [s:gui_light_gray, s:gui_dark, s:cterm_light_gray, s:cterm_dark, '']
-    let a:palette['inactive'] = airline#themes#generate_color_map(s:IA1, s:IA1, s:IA3)
-    let a:palette['inactive_modified'] = {
-          \ 'airline_c': [s:gui_orange, '', s:cterm_orange, '', ''],
-          \ }
-  endif
-endfunction
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => NERDTree
