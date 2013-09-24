@@ -459,11 +459,11 @@ let g:gist_detect_filetype = 1
 " autocmd vimenter * if !argc() | NERDTree | endif
 " Close vim if NerdTree is the only window left
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-let NERDTreeChDirMode=2
+let NERDTreeChDirMode = 2
 " 1 click to open dir node, 2 clicks to open file
-let NERDTreeMouseMode=2
+let NERDTreeMouseMode = 2
 " Always show bookmarks
-let NERDTreeShowBookmarks=1
+let NERDTreeShowBookmarks = 1
 let NERDTreeIgnore=['\.pyc$', '\~$']
 let NERDTreeStatusline = "%{substitute(getcwd(), $HOME, '~', '')}"
 " Cmd-Shift-N for nerd tree
@@ -474,13 +474,10 @@ nnoremap <silent> <C-\> :NERDTreeFind<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Syntastic
 """"""""""""""""""""""""""""""""""""""""""""""""""""
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_enable_signs=1
-let g:syntastic_auto_loc_list=2
-let g:syntastic_check_on_open=1
-let g:ruby_path ='$HOME/.rvm/rubies/default/bin'
+let g:syntastic_enable_signs = 1
+let g:syntastic_auto_loc_list = 2
+let g:syntastic_check_on_open = 1
+let g:ruby_path = '$HOME/.rvm/rubies/default/bin'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => tComment
@@ -505,7 +502,7 @@ let g:trailertrash_hide_on_open = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => QuickRun
 """"""""""""""""""""""""""""""""""""""""""""""""""""
-let b:quickrun_config = { 'outputter/buffer/append': 1 }
+let g:quickrun_config = { 'outputter/buffer/append': 1 }
 silent! nnoremap <unique> <silent> <Leader>rh :QuickRun -outputter/buffer/split ""<cr>
 silent! nnoremap <unique> <silent> <Leader>rv :QuickRun -outputter/buffer/split "vertical"<cr>
 
