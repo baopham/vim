@@ -43,6 +43,7 @@ Bundle 'xolox/vim-easytags'
 Bundle 'xolox/vim-misc'
 Bundle 'baopham/vim-nerdtree-unfocus'
 Bundle 'gmarik/sudo-gui.vim'
+Bundle 'mhinz/vim-signify'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Important settings
@@ -543,3 +544,8 @@ nnoremap sf :CtrlPF<Cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 let g:easytags_dynamic_files = 2
 let g:easytags_cmd = '/usr/local/bin/ctags -f .tags'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Signify
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:signify_disable_by_default = 1
