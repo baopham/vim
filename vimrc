@@ -4,11 +4,11 @@
 " Terminal: iTerm2  "
 """""""""""""""""""""
 set nocompatible
-filetype off
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vundle
 """"""""""""""""""""""""""""""""""""""""""""""""""""
+filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
