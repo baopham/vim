@@ -254,6 +254,8 @@ highlight MatchParen cterm=bold ctermfg=cyan
 command CDC cd %:p:h
 
 " Swap, backup, undo  {{{
+  set nobackup
+  set noswapfile
   " Try `mkdir -p ~/.cache/vim/{swap,backup,undo}` if the directories don't
   " already exists
   if isdirectory(expand('~/.cache/vim'))
@@ -298,17 +300,15 @@ endfunction
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Syntax
 """"""""""""""""""""""""""""""""""""""""""""""""""""
-if has("autocmd")
-  " Drupal *.module and *.install files.
-  augroup module
-    autocmd BufRead,BufNewFile *.module set filetype=php
-    autocmd BufRead,BufNewFile *.install set filetype=php
-    autocmd BufRead,BufNewFile *.test set filetype=php
-    autocmd BufRead,BufNewFile *.inc set filetype=php
-    autocmd BufRead,BufNewFile *.profile set filetype=php
-    autocmd BufRead,BufNewFile *.view set filetype=php
-  augroup END
-endif
+" Drupal *.module and *.install files.
+augroup module
+  autocmd BufRead,BufNewFile *.module set filetype=php
+  autocmd BufRead,BufNewFile *.install set filetype=php
+  autocmd BufRead,BufNewFile *.test set filetype=php
+  autocmd BufRead,BufNewFile *.inc set filetype=php
+  autocmd BufRead,BufNewFile *.profile set filetype=php
+  autocmd BufRead,BufNewFile *.view set filetype=php
+augroup END
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Functions
@@ -544,8 +544,6 @@ nnoremap <leader>b :CtrlPBuffer<Cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ctrlp_z_nerdtree = 1
 let g:ctrlp_extensions = ['Z', 'F']
-nnoremap sz :CtrlPZ<Cr>
-nnoremap sf :CtrlPF<Cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => EasyTags
