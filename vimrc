@@ -128,6 +128,11 @@ highlight SpellLocal term=underline cterm=underline
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 set noshowmode
 
+" This makes vim act like all other editors, buffers can
+" exist in the background without being in a window.
+" http://items.sjbach.com/319/configuring-vim-right
+set hidden
+
 set wildmenu "enable ctrl-n and ctrl-p to scroll thru matches
 set wildmode=longest,full
 
