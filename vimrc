@@ -150,8 +150,6 @@ set undolevels=1000
 
 set splitbelow "split windows at bottom
 
-set tags^=./.tags
-
 " Display help in vertical split window
 command -nargs=* -complete=help Help vertical belowright help <args>
 
