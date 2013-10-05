@@ -178,11 +178,6 @@ highlight MatchParen cterm=bold ctermfg=cyan
     \gV:call setreg('"', old_reg, old_regtype)<CR>
 " }}}
 
-" Git config {{{
-  " Spell check Git commit message
-  autocmd BufRead COMMIT_EDITMSG setlocal spell!
-" }}}
-
 " Command to change to directory of the current file
 command CDC cd %:p:h
 
