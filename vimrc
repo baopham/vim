@@ -182,21 +182,13 @@ command CDC cd %:p:h
 " Swap, backup, undo  {{{
   set nobackup
   set noswapfile
-  " Try `mkdir -p ~/.cache/vim/{swap,backup,undo}` if the directories don't
-  " already exists
-  if isdirectory(expand('~/.cache/vim'))
-    if &directory =~# '^\.,'
-      set directory^=~/.cache/vim/swap//
-    endif
-    if &backupdir =~# '^\.,'
-      set backupdir^=~/.cache/vim/backup//
-    endif
-    if exists('+undodir') && &undodir =~# '^\.\%(,\|$\)'
-      set undodir^=~/.cache/vim/undo//
-    endif
-  endif
+  set nowb
   if exists('+undofile')
     set undofile
+    " Try `mkdir -p ~/.cache/vim/undo` if the directory doesn't already exist
+    if isdirectory(expand('~/.cache/vim/undo')) && &undodir =~# '^\.\%(,\|$\)'
+      set undodir^=~/.cache/vim/undo//
+    endif
   endif
 " }}}
 
