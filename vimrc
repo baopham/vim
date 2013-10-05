@@ -25,7 +25,6 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'thinca/vim-quickrun'
 Bundle 'tpope/vim-repeat'
 Bundle 'mattn/sonictemplate-vim'
-Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-surround'
 Bundle 'scrooloose/syntastic'
 Bundle 'majutsushi/tagbar'
@@ -43,6 +42,7 @@ Bundle 'xolox/vim-misc'
 Bundle 'baopham/vim-nerdtree-unfocus'
 Bundle 'gmarik/sudo-gui.vim'
 Bundle 'mhinz/vim-signify'
+Bundle 'Valloric/YouCompleteMe'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Important settings
