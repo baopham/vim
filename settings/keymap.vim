@@ -56,3 +56,21 @@ imap <c-e><c-h> <left>
     nnoremap <silent> < <C-w><<C-w><
   endif
 " }}}
+
+" Display tag in a vertical split window
+map <A-]> :rightbelow vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+
+" Search for selected text, forwards or backwards {{{
+  " Press * to search forwards
+  vnoremap <silent> * :<C-U>
+    \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
+    \gvy/<C-R><C-R>=substitute(
+    \escape(@", '/\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
+    \gV:call setreg('"', old_reg, old_regtype)<CR>
+  " Press # to search backwards
+  vnoremap <silent> # :<C-U>
+    \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
+    \gvy?<C-R><C-R>=substitute(
+    \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
+    \gV:call setreg('"', old_reg, old_regtype)<CR>
+" }}}

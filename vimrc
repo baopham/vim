@@ -153,28 +153,10 @@ set splitbelow "split windows at bottom
 " Display help in vertical split window
 command -nargs=* -complete=help Help vertical belowright help <args>
 
-" Display tag in a vertical split window
-map <A-]> :rightbelow vsp <CR>:exec("tag ".expand("<cword>"))<CR>
-
 " Resize splits when window is resized
 au VimResized * exe "normal! \<c-w>="
 
 highlight MatchParen cterm=bold ctermfg=cyan
-
-" Search for selected text, forwards or backwards {{{
-  " Press * to search forwards
-  vnoremap <silent> * :<C-U>
-    \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
-    \gvy/<C-R><C-R>=substitute(
-    \escape(@", '/\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
-    \gV:call setreg('"', old_reg, old_regtype)<CR>
-  " Press # to search backwards
-  vnoremap <silent> # :<C-U>
-    \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
-    \gvy?<C-R><C-R>=substitute(
-    \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
-    \gV:call setreg('"', old_reg, old_regtype)<CR>
-" }}}
 
 " Command to change to directory of the current file
 command CDC cd %:p:h
