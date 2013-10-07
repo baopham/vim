@@ -150,6 +150,10 @@ set undolevels=1000
 
 set splitbelow "split windows at bottom
 
+set scrolloff=8 "Start scrolling when we're 8 lines away from margins
+set sidescrolloff=15
+set sidescroll=1
+
 " Display help in vertical split window
 command -nargs=* -complete=help Help vertical belowright help <args>
 
