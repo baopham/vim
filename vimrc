@@ -43,6 +43,7 @@ Bundle 'xolox/vim-easytags'
 Bundle 'xolox/vim-misc'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'gmarik/sudo-gui.vim'
+Bundle 'terryma/vim-multiple-cursors'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Important settings
