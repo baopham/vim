@@ -7,3 +7,5 @@ augroup module
   autocmd BufRead,BufNewFile *.profile set filetype=php
   autocmd BufRead,BufNewFile *.view set filetype=php
 augroup END
+
+autocmd BufRead,BufNewFile *.octave set filetype=matlab
