@@ -72,11 +72,6 @@ endif
 " Disable bell
 set visualbell
 
-augroup ResCur
-  autocmd!
-  autocmd BufWinEnter * call ResCur()
-augroup END
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colorscheme
 """"""""""""""""""""""""""""""""""""""""""""""""""""

@@ -47,6 +47,11 @@
     endif
   endfunction
 
+  augroup ResCur
+    autocmd!
+    autocmd BufWinEnter * call ResCur()
+  augroup END
+
 " }}}
 
 " Swap split windows {{{
