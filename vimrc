@@ -109,6 +109,7 @@ endif
 " => Miscellaneous
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 set noshowmode
+set binary
 
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
