@@ -74,3 +74,6 @@ map <A-]> :rightbelow vsp <CR>:exec("tag ".expand("<cword>"))<CR>
     \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
     \gV:call setreg('"', old_reg, old_regtype)<CR>
 " }}}
+
+" Toggle paste mode
+map <leader>p :set paste!<CR>
