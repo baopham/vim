@@ -29,11 +29,6 @@ nnoremap <silent> <Space> :silent noh<Bar>echo<CR>
 hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 nnoremap <C-c> :silent set cursorline!<Bar>echo<CR>
 
-" Autoclose braces
-inoremap {<CR> {<CR>}<Esc>O
-inoremap [<CR> [<CR>]<Esc>O
-inoremap (<CR> (<CR>)<Esc>O
-
 " Switch between split windows
 map <C-j> <C-w>j
 map <C-k> <C-w>k

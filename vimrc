@@ -45,6 +45,7 @@ Bundle 'Valloric/YouCompleteMe'
 Bundle 'gmarik/sudo-gui.vim'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'junegunn/vim-easy-align'
+Bundle 'jiangmiao/auto-pairs'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Important settings
