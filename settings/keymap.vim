@@ -72,3 +72,6 @@ map <A-]> :rightbelow vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
 " Toggle paste mode
 map <leader>p :set paste!<CR>
+
+" Switch off K ! turn it on using :unmap K
+map K <Nop>
