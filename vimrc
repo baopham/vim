@@ -13,39 +13,53 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
+
+" File finder
 Bundle 'kien/ctrlp.vim'
 Bundle 'amiorin/ctrlp-z'
+Bundle 'scrooloose/nerdtree'
+Bundle 'baopham/vim-nerdtree-unfocus'
+
+" Text, easier navigation and editing
 Bundle 'ciaranm/detectindent'
 Bundle 'Lokaltog/vim-easymotion'
+Bundle 'junegunn/vim-easy-align'
+Bundle 'terryma/vim-multiple-cursors'
+Bundle 'jiangmiao/auto-pairs'
+Bundle 'tpope/vim-surround'
+Bundle 'baopham/trailertrash.vim'
+Bundle 'tpope/vim-repeat'
+
+" CVS
 Bundle 'tpope/vim-fugitive'
 Bundle 'mattn/gist-vim'
 Bundle 'mattn/webapi-vim'
 Bundle 'gregsexton/gitv'
 Bundle 'mhinz/vim-signify'
-Bundle 'mbbill/undotree'
+
+" Syntax highlighting & templating
 Bundle 'tpope/vim-markdown'
-Bundle 'mattn/sonictemplate-vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'baopham/vim-nerdtree-unfocus'
-Bundle 'thinca/vim-quickrun'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-surround'
-Bundle 'scrooloose/syntastic'
-Bundle 'majutsushi/tagbar'
-Bundle 'tomtom/tcomment_vim'
-Bundle 'baopham/trailertrash.vim'
-Bundle 'vim-scripts/YankRing.vim'
 Bundle 'othree/html5.vim'
 Bundle 'python.vim'
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Bundle 'mattn/sonictemplate-vim'
+
+" Tags & coding related
 Bundle 'xolox/vim-easytags'
 Bundle 'xolox/vim-misc'
+Bundle 'majutsushi/tagbar'
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'tomtom/tcomment_vim'
+Bundle 'scrooloose/syntastic'
+
+" Appearance
+Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+
+" Others
 Bundle 'gmarik/sudo-gui.vim'
-Bundle 'terryma/vim-multiple-cursors'
-Bundle 'junegunn/vim-easy-align'
-Bundle 'jiangmiao/auto-pairs'
+Bundle 'thinca/vim-quickrun'
+Bundle 'vim-scripts/YankRing.vim'
+Bundle 'mbbill/undotree'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Important settings
