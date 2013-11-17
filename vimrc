@@ -29,6 +29,7 @@ Bundle 'jiangmiao/auto-pairs'
 Bundle 'tpope/vim-surround'
 Bundle 'baopham/trailertrash.vim'
 Bundle 'tpope/vim-repeat'
+Bundle 'gavinbeatty/dragvisuals.vim'
 
 " CVS
 Bundle 'tpope/vim-fugitive'
