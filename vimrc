@@ -64,6 +64,7 @@ Bundle 'gmarik/sudo-gui.vim'
 Bundle 'thinca/vim-quickrun'
 Bundle 'vim-scripts/YankRing.vim'
 Bundle 'mbbill/undotree'
+Bundle 'Shougo/junkfile.vim'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Important settings
