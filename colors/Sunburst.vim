@@ -102,3 +102,7 @@ hi DiffAdd      ctermfg=black ctermbg=117 guifg=black guibg=skyblue1
 hi DiffChange   ctermfg=black ctermbg=229 guifg=black guibg=wheat1
 hi DiffDelete   ctermfg=black ctermbg=243 guifg=black guibg=gray45 gui=none
 hi DiffText     ctermfg=black ctermbg=132 guifg=black guibg=hotpink1 gui=none
+
+" Tabline
+hi TabLine      ctermfg=Black  ctermbg=Green  cterm=NONE
+hi TabLineSel   ctermfg=White  ctermbg=Black  cterm=NONE
