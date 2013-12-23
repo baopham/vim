@@ -45,6 +45,7 @@ Bundle 'othree/html5.vim'
 Bundle 'python.vim'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'mattn/sonictemplate-vim'
+Bundle 'pangloss/vim-javascript'
 
 " Tags & coding related
 Bundle 'xolox/vim-easytags'
