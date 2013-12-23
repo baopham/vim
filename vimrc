@@ -55,6 +55,7 @@ Bundle 'majutsushi/tagbar'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'scrooloose/syntastic'
+Bundle 'lfilho/cosco.vim'
 
 " Appearance
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
