@@ -65,6 +65,7 @@ Bundle 'thinca/vim-quickrun'
 Bundle 'vim-scripts/YankRing.vim'
 Bundle 'mbbill/undotree'
 Bundle 'Shougo/junkfile.vim'
+Bundle 'szw/vim-maximizer'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Important settings
