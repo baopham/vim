@@ -30,6 +30,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'baopham/trailertrash.vim'
 Bundle 'tpope/vim-repeat'
 Bundle 'gavinbeatty/dragvisuals.vim'
+Bundle 'xsunsmile/showmarks'
 
 " CVS
 Bundle 'tpope/vim-fugitive'
