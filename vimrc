@@ -161,6 +161,11 @@ set scrolloff=8 "Start scrolling when we're 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
 
+" Different background color for characters going past the 80 limit
+" Credit: http://stackoverflow.com/a/13731714/949806
+highlight ColorColumn ctermbg=234 guibg=#2c2d27
+let &colorcolumn=join(range(81,999),",")
+
 " Display help in vertical split window
 command -nargs=* -complete=help Help vertical belowright help <args>
 
