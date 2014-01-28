@@ -63,6 +63,7 @@ Bundle 'lfilho/cosco.vim'
 Bundle 'rizzatti/dash.vim'
 Bundle 'rizzatti/funcoo.vim'
 " }}}
+Bundle 'bserem/vim-drupal'
 
 " Appearance
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
