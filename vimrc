@@ -168,6 +168,8 @@ set scrolloff=8 "Start scrolling when we're 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
 
+set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+
 " Different background color for characters going past the 80 limit
 " Credit: http://stackoverflow.com/a/13731714/949806
 highlight ColorColumn ctermbg=234 guibg=#2c2d27
