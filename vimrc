@@ -134,6 +134,10 @@ if has("gui_running")
 
   " Show tab number
   autocmd VimEnter * set guitablabel=%M\ %t\ \⌘%N
+
+  " Enable horizontal scrolling
+  " set guioptions+=h
+  " set nowrap
 endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
