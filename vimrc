@@ -59,6 +59,10 @@ Bundle 'tomtom/tcomment_vim'
 Bundle 'scrooloose/syntastic'
 " append, remove semi-colon or comma
 Bundle 'lfilho/cosco.vim'
+" {{{ plugin for Dash.app
+Bundle 'rizzatti/dash.vim'
+Bundle 'rizzatti/funcoo.vim'
+" }}}
 
 " Appearance
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
