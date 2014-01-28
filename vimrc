@@ -34,8 +34,10 @@ Bundle 'xsunsmile/showmarks'
 
 " CVS
 Bundle 'tpope/vim-fugitive'
+" {{{ Gist
 Bundle 'mattn/gist-vim'
 Bundle 'mattn/webapi-vim'
+" }}}
 Bundle 'gregsexton/gitv'
 Bundle 'mhinz/vim-signify'
 
@@ -55,6 +57,7 @@ Bundle 'majutsushi/tagbar'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'scrooloose/syntastic'
+" append, remove semi-colon or comma
 Bundle 'lfilho/cosco.vim'
 
 " Appearance
