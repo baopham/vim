@@ -19,6 +19,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'amiorin/ctrlp-z'
 Bundle 'scrooloose/nerdtree'
 Bundle 'baopham/vim-nerdtree-unfocus'
+Bundle 'mhinz/vim-startify'
 
 " Text, easier navigation and editing
 Bundle 'ciaranm/detectindent'
