@@ -120,7 +120,6 @@ if has("gui_running")
   set guioptions-=L
   set guioptions-=r
   set showtabline=2 "always show tabs
-  set lines=73 columns=212
   set macmeta
 
   let g:tagbar_iconchars = ['▸', '▾']
