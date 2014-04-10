@@ -104,5 +104,5 @@ hi DiffDelete   ctermfg=black ctermbg=243 guifg=black guibg=gray45 gui=none
 hi DiffText     ctermfg=black ctermbg=132 guifg=black guibg=hotpink1 gui=none
 
 " Tabline
-hi TabLine      ctermfg=Black  ctermbg=Green  cterm=NONE
-hi TabLineSel   ctermfg=White  ctermbg=Black  cterm=NONE
+hi TabLineSel ctermfg=Black ctermbg=Green cterm=NONE
+hi TabLine    ctermfg=White ctermbg=Black cterm=NONE
