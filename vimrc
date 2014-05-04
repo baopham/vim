@@ -16,67 +16,33 @@ Bundle 'gmarik/vundle'
 
 " File finder
 Bundle 'kien/ctrlp.vim'
-Bundle 'amiorin/ctrlp-z'
 Bundle 'scrooloose/nerdtree'
 Bundle 'baopham/vim-nerdtree-unfocus'
-Bundle 'mhinz/vim-startify'
 
 " Text, easier navigation and editing
 Bundle 'ciaranm/detectindent'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'junegunn/vim-easy-align'
-Bundle 'terryma/vim-multiple-cursors'
 Bundle 'tpope/vim-surround'
 Bundle 'Raimondi/delimitMate'
 Bundle 'baopham/trailertrash.vim'
-Bundle 'tpope/vim-repeat'
-Bundle 'gavinbeatty/dragvisuals.vim'
-Bundle 'xsunsmile/showmarks'
 
 " CVS
 Bundle 'tpope/vim-fugitive'
-" {{{ Gist
-Bundle 'mattn/gist-vim'
-Bundle 'mattn/webapi-vim'
-" }}}
-Bundle 'gregsexton/gitv'
-Bundle 'mhinz/vim-signify'
 
 " Syntax highlighting & templating
 Bundle 'tpope/vim-markdown'
 Bundle 'othree/html5.vim'
 Bundle 'python.vim'
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'mattn/sonictemplate-vim'
 Bundle 'pangloss/vim-javascript'
-Bundle 'digitaltoad/vim-jade'
 
-" Tags & coding related
-Bundle 'xolox/vim-easytags'
-Bundle 'xolox/vim-misc'
-Bundle 'majutsushi/tagbar'
-Bundle 'Valloric/YouCompleteMe'
+" Coding related
 Bundle 'tomtom/tcomment_vim'
-Bundle 'scrooloose/syntastic'
-" append, remove semi-colon or comma
-Bundle 'lfilho/cosco.vim'
-" {{{ plugin for Dash.app
-Bundle 'rizzatti/dash.vim'
-Bundle 'rizzatti/funcoo.vim'
-" }}}
-Bundle 'bserem/vim-drupal'
-
-" Appearance
-Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " Others
-Bundle 'gmarik/sudo-gui.vim'
-Bundle 'thinca/vim-quickrun'
 Bundle 'vim-scripts/YankRing.vim'
 Bundle 'mbbill/undotree'
-Bundle 'basepi/vim-conque'
-Bundle 'Shougo/junkfile.vim'
-Bundle 'szw/vim-maximizer'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Important settings
@@ -115,7 +81,7 @@ colo Sunburst
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 if has("gui_running")
   colo wombat
-  set gfn=Monaco\ for\ Powerline:h12
+  set gfn=Monaco:h12
   set guioptions-=T
   set guioptions-=L
   set guioptions-=r
@@ -151,6 +117,18 @@ if !has("gui_running")
   set ttimeout
   set ttimeoutlen=100
 endif
+
+set statusline=
+set statusline+=\ %F\                                   " file+path
+set statusline+=\%m%r%w\                                " modified? readonly?
+set statusline+=%{fugitive#statusline()}                " git branch
+set statusline+=\ %<%=%{''.(&fenc!=''?&fenc:&enc).''}   " encoding
+set statusline+=\ %{(&bomb?\",BOM\":\"\")}\             " encoding2
+set statusline+=\|\ %{&ff}\                             " fileFormat (dos/unix..)
+set statusline+=\|\ %y\                                 " fileType
+set statusline+=\|\ row:%3p%%\                          " row (%)
+set statusline+=\|\ col:%3c\                            " colnumber
+set statusline+=\|\ %P                                  " top/bottom
 
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.

@@ -14,10 +14,6 @@ map <silent> <D-9> :tabn 9<cr>
 map <S-Enter> O<Esc>
 map <CR> o<Esc>
 
-" Map <ESC> to jk, kj in Insert mode
-imap jk <ESC>
-imap kj <ESC>
-
 " Copy & Paste to/from system clipboard
 vmap ,y "*y
 map ,p "*p
