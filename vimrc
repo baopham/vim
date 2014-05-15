@@ -70,7 +70,6 @@ Bundle 'gmarik/sudo-gui.vim'
 Bundle 'thinca/vim-quickrun'
 Bundle 'vim-scripts/YankRing.vim'
 Bundle 'mbbill/undotree'
-Bundle 'basepi/vim-conque'
 Bundle 'Shougo/junkfile.vim'
 Bundle 'szw/vim-maximizer'
 
