@@ -12,37 +12,37 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
 " File finder
-Bundle 'kien/ctrlp.vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'baopham/vim-nerdtree-unfocus'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'baopham/vim-nerdtree-unfocus'
 
 " Text, easier navigation and editing
-Bundle 'ciaranm/detectindent'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'junegunn/vim-easy-align'
-Bundle 'tpope/vim-surround'
-Bundle 'Raimondi/delimitMate'
-Bundle 'baopham/trailertrash.vim'
+Plugin 'ciaranm/detectindent'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'junegunn/vim-easy-align'
+Plugin 'tpope/vim-surround'
+Plugin 'Raimondi/delimitMate'
+Plugin 'baopham/trailertrash.vim'
 
 " CVS
-Bundle 'tpope/vim-fugitive'
+Plugin 'tpope/vim-fugitive'
 
 " Syntax highlighting & templating
-Bundle 'tpope/vim-markdown'
-Bundle 'othree/html5.vim'
-Bundle 'python.vim'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'pangloss/vim-javascript'
+Plugin 'tpope/vim-markdown'
+Plugin 'othree/html5.vim'
+Plugin 'python.vim'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'pangloss/vim-javascript'
 
 " Coding related
-Bundle 'tomtom/tcomment_vim'
+Plugin 'tomtom/tcomment_vim'
 
 " Others
-Bundle 'vim-scripts/YankRing.vim'
-Bundle 'mbbill/undotree'
+Plugin 'vim-scripts/YankRing.vim'
+Plugin 'mbbill/undotree'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Important settings
