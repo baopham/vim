@@ -12,68 +12,68 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
 " File finder
-Bundle 'kien/ctrlp.vim'
-Bundle 'amiorin/ctrlp-z'
-Bundle 'scrooloose/nerdtree'
-Bundle 'baopham/vim-nerdtree-unfocus'
-Bundle 'mhinz/vim-startify'
+Plugin 'kien/ctrlp.vim'
+Plugin 'amiorin/ctrlp-z'
+Plugin 'scrooloose/nerdtree'
+Plugin 'baopham/vim-nerdtree-unfocus'
+Plugin 'mhinz/vim-startify'
 
 " Text, easier navigation and editing
-Bundle 'ciaranm/detectindent'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'junegunn/vim-easy-align'
-Bundle 'terryma/vim-multiple-cursors'
-Bundle 'tpope/vim-surround'
-Bundle 'Raimondi/delimitMate'
-Bundle 'baopham/trailertrash.vim'
-Bundle 'tpope/vim-repeat'
-Bundle 'gavinbeatty/dragvisuals.vim'
-Bundle 'xsunsmile/showmarks'
+Plugin 'ciaranm/detectindent'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'junegunn/vim-easy-align'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'tpope/vim-surround'
+Plugin 'Raimondi/delimitMate'
+Plugin 'baopham/trailertrash.vim'
+Plugin 'tpope/vim-repeat'
+Plugin 'gavinbeatty/dragvisuals.vim'
+Plugin 'xsunsmile/showmarks'
 
 " CVS
-Bundle 'tpope/vim-fugitive'
+Plugin 'tpope/vim-fugitive'
 " {{{ Gist
-Bundle 'mattn/gist-vim'
-Bundle 'mattn/webapi-vim'
+Plugin 'mattn/gist-vim'
+Plugin 'mattn/webapi-vim'
 " }}}
-Bundle 'gregsexton/gitv'
-Bundle 'mhinz/vim-signify'
+Plugin 'gregsexton/gitv'
+Plugin 'mhinz/vim-signify'
 
 " Syntax highlighting & templating
-Bundle 'tpope/vim-markdown'
-Bundle 'othree/html5.vim'
-Bundle 'python.vim'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'mattn/sonictemplate-vim'
-Bundle 'pangloss/vim-javascript'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'digitaltoad/vim-jade'
-Bundle 'tpope/vim-haml'
+Plugin 'tpope/vim-markdown'
+Plugin 'othree/html5.vim'
+Plugin 'python.vim'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'mattn/sonictemplate-vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'digitaltoad/vim-jade'
+Plugin 'tpope/vim-haml'
 
 " Tags & coding related
-Bundle 'xolox/vim-easytags'
-Bundle 'xolox/vim-misc'
-Bundle 'majutsushi/tagbar'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'tomtom/tcomment_vim'
-Bundle 'scrooloose/syntastic'
+Plugin 'xolox/vim-easytags'
+Plugin 'xolox/vim-misc'
+Plugin 'majutsushi/tagbar'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'scrooloose/syntastic'
 " append, remove semi-colon or comma
-Bundle 'lfilho/cosco.vim'
-Bundle 'bserem/vim-drupal'
+Plugin 'lfilho/cosco.vim'
+Plugin 'bserem/vim-drupal'
 
 " Appearance
-Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " Others
-Bundle 'gmarik/sudo-gui.vim'
-Bundle 'thinca/vim-quickrun'
-Bundle 'vim-scripts/YankRing.vim'
-Bundle 'mbbill/undotree'
-Bundle 'Shougo/junkfile.vim'
-Bundle 'szw/vim-maximizer'
+Plugin 'gmarik/sudo-gui.vim'
+Plugin 'thinca/vim-quickrun'
+Plugin 'vim-scripts/YankRing.vim'
+Plugin 'mbbill/undotree'
+Plugin 'Shougo/junkfile.vim'
+Plugin 'szw/vim-maximizer'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Important settings
