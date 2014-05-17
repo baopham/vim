@@ -3,14 +3,15 @@
 " GUI: MacVim       "
 " Terminal: iTerm2  "
 """""""""""""""""""""
-set nocompatible
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vundle
 """"""""""""""""""""""""""""""""""""""""""""""""""""
+set nocompatible
 filetype off
+
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call vundle#begin()
 
 Plugin 'gmarik/vundle'
 
@@ -75,11 +76,13 @@ Plugin 'mbbill/undotree'
 Plugin 'Shougo/junkfile.vim'
 Plugin 'szw/vim-maximizer'
 
+call vundle#end()
+filetype plugin indent on
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Important settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on
-filetype plugin indent on
 
 set laststatus=2
 set encoding=utf-8
