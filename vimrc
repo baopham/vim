@@ -178,7 +178,7 @@ set scrolloff=8 "start scrolling when we're 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
 
-set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+set listchars=eol:\ ,tab:\|\ ,trail:·,extends:>,precedes:<
 
 " Different background color for characters going past the 80 limit
 " Credit: http://stackoverflow.com/a/13731714/949806
