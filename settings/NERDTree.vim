@@ -9,7 +9,5 @@ let NERDTreeMouseMode = 2
 let NERDTreeShowBookmarks = 1
 let NERDTreeIgnore=['\.pyc$', '\~$']
 let NERDTreeStatusline = "%{getcwd()}"
-" Cmd-Shift-N for nerd tree
-nmap <D-N> :NERDTreeToggle<CR>
-" Open the project tree and expose current file in the nerdtree with Ctrl-\
-nnoremap <silent> <C-\> :NERDTreeFind<CR>
+" Toggle NERDTree
+nnoremap <silent> <C-\> :NERDTreeToggle<CR>
