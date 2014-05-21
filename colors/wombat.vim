@@ -34,7 +34,7 @@ hi Title        guifg=#f6f3e8 guibg=NONE	gui=bold
 hi Visual       guifg=#f6f3e8 guibg=#444444 gui=none
 hi SpecialKey   guifg=#727272 guibg=NONE gui=none
 hi MatchParen   ctermfg=173 ctermbg=NONE cterm=NONE guifg=yellow guibg=NONE gui=NONE
-hi Search       term=reverse ctermfg=0 ctermbg=14 guifg=Black guibg=#b3ccea
+hi Search       ctermfg=227 ctermbg=24 guifg=#ffff5f guibg=#52BDE3
 
 " Syntax highlighting
 hi Comment      guifg=#99968b gui=italic
