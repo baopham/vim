@@ -19,3 +19,6 @@ let g:startify_session_autoload = 1
 let g:startify_session_persistence = 1
 
 let g:startify_skiplist = [ '.git' ]
+
+" Close startify when opening file via NERDTree and CtrlP
+autocmd FileType startify setlocal buftype=
