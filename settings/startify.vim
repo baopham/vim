@@ -16,8 +16,6 @@ let g:startify_bookmarks = [ '~/.vim', '~/.vimrc', '~/.tmux.conf' ]
 
 let g:startify_session_autoload = 1
 
-let g:startify_session_persistence = 1
-
 let g:startify_skiplist = [ '.git' ]
 
 " Close startify when opening file via NERDTree and CtrlP
