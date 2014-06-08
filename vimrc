@@ -20,7 +20,8 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'amiorin/ctrlp-z'
 Plugin 'scrooloose/nerdtree'
 Plugin 'baopham/vim-nerdtree-unfocus'
-Plugin 'mhinz/vim-startify'
+" Session manager, dependency: xolox/vim-misc
+Plugin 'xolox/vim-session'
 
 " Text, easier navigation and editing
 Plugin 'ciaranm/detectindent'
