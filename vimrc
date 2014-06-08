@@ -172,6 +172,7 @@ set sidescrolloff=15
 set sidescroll=1
 
 set listchars=eol:\ ,tab:\|\ ,trail:·,extends:>,precedes:<
+set list
 
 " Different background color for characters going past the 80 limit
 " Credit: http://stackoverflow.com/a/13731714/949806
