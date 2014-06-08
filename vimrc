@@ -57,6 +57,7 @@ Plugin 'scrooloose/syntastic'
 " append, remove semi-colon or comma
 Plugin 'lfilho/cosco.vim'
 Plugin 'bserem/vim-drupal'
+Plugin 'msanders/snipmate.vim'
 
 " Appearance
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
