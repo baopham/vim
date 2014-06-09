@@ -32,7 +32,6 @@ Plugin 'tpope/vim-surround'
 Plugin 'Raimondi/delimitMate'
 Plugin 'baopham/trailertrash.vim'
 Plugin 'tpope/vim-repeat'
-Plugin 'gavinbeatty/dragvisuals.vim'
 Plugin 'xsunsmile/showmarks'
 
 " CVS
