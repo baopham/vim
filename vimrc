@@ -62,7 +62,6 @@ Plugin 'msanders/snipmate.vim'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " Others
-Plugin 'gmarik/sudo-gui.vim'
 Plugin 'thinca/vim-quickrun'
 Plugin 'vim-scripts/YankRing.vim'
 Plugin 'mbbill/undotree'
