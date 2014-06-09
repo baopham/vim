@@ -41,7 +41,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'mattn/gist-vim'
 Plugin 'mattn/webapi-vim'
 " }}}
-Plugin 'gregsexton/gitv'
 Plugin 'mhinz/vim-signify'
 
 " Syntax highlighting & templating
