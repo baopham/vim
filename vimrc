@@ -66,7 +66,6 @@ Plugin 'gmarik/sudo-gui.vim'
 Plugin 'thinca/vim-quickrun'
 Plugin 'vim-scripts/YankRing.vim'
 Plugin 'mbbill/undotree'
-Plugin 'Shougo/junkfile.vim'
 Plugin 'szw/vim-maximizer'
 
 call vundle#end()
