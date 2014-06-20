@@ -44,15 +44,8 @@ Plugin 'gregsexton/gitv'
 Plugin 'mhinz/vim-signify'
 
 " Syntax highlighting & templating
-Plugin 'tpope/vim-markdown'
-Plugin 'othree/html5.vim'
-Plugin 'python.vim'
-Plugin 'vim-ruby/vim-ruby'
 Plugin 'mattn/sonictemplate-vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'digitaltoad/vim-jade'
-Plugin 'tpope/vim-haml'
+Plugin 'sheerun/vim-polyglot'
 
 " Tags & coding related
 Plugin 'xolox/vim-easytags'
