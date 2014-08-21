@@ -144,6 +144,13 @@ if !has("gui_running")
   set ttimeoutlen=100
 endif
 
+"  +c:  Apply 'textwidth' to comments.
+"  +r:  Continue comments after hitting <Enter> in Insert mode.
+"  +o:  Continue comments after when using 'O' or 'o' to open a new line.
+"  +q:  Format comments using q<motion>.
+"  +l:  Do not break a comment line if it is long before you start.
+set formatoptions+=croql
+
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
 " http://items.sjbach.com/319/configuring-vim-right
