@@ -20,8 +20,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'amiorin/ctrlp-z'
 Plugin 'scrooloose/nerdtree'
 Plugin 'baopham/vim-nerdtree-unfocus'
-" Session manager, dependency: xolox/vim-misc
-Plugin 'xolox/vim-session'
+Plugin 'xolox/vim-session' " session manager, dependency: xolox/vim-misc
 
 " Text, easier navigation and editing
 Plugin 'ciaranm/detectindent'
@@ -53,9 +52,8 @@ Plugin 'majutsushi/tagbar'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'scrooloose/syntastic'
-" append, remove semi-colon or comma
-Plugin 'lfilho/cosco.vim'
-Plugin 'bserem/vim-drupal'
+Plugin 'lfilho/cosco.vim' " append, remove semi-colon or comma
+Plugin 'baopham/vim-drupal'
 Plugin 'msanders/snipmate.vim'
 
 " Appearance
