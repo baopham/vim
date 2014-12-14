@@ -74,4 +74,4 @@ map <A-]> :rightbelow vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 map <leader>p :set paste!<CR>
 
 " Switch off K ! turn it on using :unmap K
-nmap K <Nop>
+map K <Nop>
