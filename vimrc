@@ -32,6 +32,9 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'baopham/trailertrash.vim'
 Plugin 'tpope/vim-repeat'
 Plugin 'xsunsmile/showmarks'
+" Improve search
+Plugin 'junegunn/vim-pseudocl'
+Plugin 'junegunn/vim-oblique'
 
 " CVS
 Plugin 'tpope/vim-fugitive'
