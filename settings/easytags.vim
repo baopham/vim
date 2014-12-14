@@ -1,6 +1,9 @@
 set tags=./.tags,./tags
-let g:easytags_dynamic_files = 2
+let g:easytags_syntax_keyword = 'always'
+let g:easytags_dynamic_files = 1
+let g:easytags_async = 1
 let g:easytags_cmd = '/usr/local/bin/ctags -f .tags'
 let g:easytags_updatetime_min = 5000
 let g:easytags_updatetime_warn = 0
-let g:easytags_events = []
+let g:easytags_on_cursorhold = 0
+let g:easytags_python_enabled="always"
