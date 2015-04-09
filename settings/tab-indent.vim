@@ -26,3 +26,12 @@ function! s:SetTab(width)
   setlocal noexpandtab
   let &tabstop= a:width
 endfunction
+
+command! SetLaravelSession call s:SetLaravelSession()
+function! s:SetLaravelSession()
+  let &tabstop=4
+  autocmd FileType html setl sts=4 sw=4 expandtab
+  autocmd FileType php,javascript setl sts=4 sw=4 expandtab comments=sr:/**,m:*\ ,ex:*/,:// formatoptions+=croql formatoptions-=t
+  autocmd FileType css,scss setlocal sts=2 sw=2 expandtab
+  autocmd BufRead,BufNewFile,BufEnter package.json,bower.json,.travis.yml setl sts=2 sw=2 expandtab
+endfunction
