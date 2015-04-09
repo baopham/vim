@@ -3,3 +3,5 @@ bundle/*
 spell
 session
 sessions
+eclim
+plugin/eclim.vim
