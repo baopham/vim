@@ -60,6 +60,7 @@ Plugin 'baopham/vim-drupal'
 Plugin 'msanders/snipmate.vim'
 Plugin 'joonty/vdebug'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'marijnh/tern_for_vim'
 
 " Appearance
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
