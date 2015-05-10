@@ -62,7 +62,7 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'marijnh/tern_for_vim'
 
 " Appearance
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'bling/vim-airline'
 
 " Others
 Plugin 'gmarik/sudo-gui.vim'
