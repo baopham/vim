@@ -33,8 +33,7 @@ Plugin 'baopham/trailertrash.vim'
 Plugin 'tpope/vim-repeat'
 Plugin 'xsunsmile/showmarks'
 " Improve search
-Plugin 'junegunn/vim-pseudocl'
-Plugin 'junegunn/vim-oblique'
+Plugin 'osyo-manga/vim-anzu'
 
 " CVS
 Plugin 'tpope/vim-fugitive'
