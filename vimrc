@@ -62,7 +62,8 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'marijnh/tern_for_vim'
 
 " Appearance
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " Others
 Plugin 'gmarik/sudo-gui.vim'
