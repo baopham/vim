@@ -48,7 +48,7 @@ Plugin 'mattn/sonictemplate-vim'
 Plugin 'sheerun/vim-polyglot'
 
 " Tags & coding related
-Plugin 'xolox/vim-easytags'
+" Plugin 'xolox/vim-easytags'
 Plugin 'xolox/vim-misc'
 Plugin 'majutsushi/tagbar'
 Plugin 'Valloric/YouCompleteMe'
