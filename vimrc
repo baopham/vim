@@ -26,7 +26,7 @@ Plugin 'xolox/vim-session' " session manager, dependency: xolox/vim-misc
 Plugin 'ciaranm/detectindent'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'junegunn/vim-easy-align'
-Plugin 'cohama/lexima.vim'
+Plugin 'jiangmiao/auto-pairs'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-surround'
 Plugin 'baopham/trailertrash.vim'
@@ -46,6 +46,8 @@ Plugin 'mhinz/vim-signify'
 " Syntax highlighting & templating
 Plugin 'mattn/sonictemplate-vim'
 Plugin 'sheerun/vim-polyglot'
+Plugin 'elmcast/elm-vim'
+Plugin 'mxw/vim-jsx'
 
 " Tags & coding related
 " Plugin 'xolox/vim-easytags'
