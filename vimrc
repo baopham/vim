@@ -17,6 +17,7 @@ Plugin 'gmarik/vundle'
 
 " File finder
 Plugin 'kien/ctrlp.vim'
+Plugin 'mileszs/ack.vim'
 Plugin 'amiorin/ctrlp-z'
 Plugin 'scrooloose/nerdtree'
 Plugin 'baopham/vim-nerdtree-unfocus'
@@ -47,10 +48,11 @@ Plugin 'mhinz/vim-signify'
 Plugin 'mattn/sonictemplate-vim'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'elmcast/elm-vim'
+Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 
 " Tags & coding related
-" Plugin 'xolox/vim-easytags'
+Plugin 'xolox/vim-easytags'
 Plugin 'xolox/vim-misc'
 Plugin 'majutsushi/tagbar'
 Plugin 'Valloric/YouCompleteMe'
@@ -73,6 +75,8 @@ Plugin 'thinca/vim-quickrun'
 Plugin 'vim-scripts/YankRing.vim'
 Plugin 'mbbill/undotree'
 Plugin 'szw/vim-maximizer'
+Plugin 'vim-scripts/SyntaxRange'
+Plugin 'vim-scripts/ingo-library'
 
 call vundle#end()
 filetype plugin indent on
