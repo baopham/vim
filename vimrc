@@ -48,8 +48,6 @@ Plugin 'mhinz/vim-signify'
 Plugin 'mattn/sonictemplate-vim'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'elmcast/elm-vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
 
 " Tags & coding related
 Plugin 'xolox/vim-easytags'
