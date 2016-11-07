@@ -17,7 +17,7 @@ Plugin 'gmarik/vundle'
 
 " File finder
 Plugin 'kien/ctrlp.vim'
-Plugin 'mileszs/ack.vim'
+Plugin 'dyng/ctrlsf.vim'
 Plugin 'amiorin/ctrlp-z'
 Plugin 'scrooloose/nerdtree'
 Plugin 'baopham/vim-nerdtree-unfocus'
