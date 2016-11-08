@@ -16,7 +16,7 @@ call vundle#begin()
 Plugin 'gmarik/vundle'
 
 " File finder
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'dyng/ctrlsf.vim'
 Plugin 'amiorin/ctrlp-z'
 Plugin 'scrooloose/nerdtree'
