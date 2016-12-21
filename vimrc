@@ -188,10 +188,10 @@ set sidescroll=1
 set listchars=eol:\ ,tab:\|\ ,trail:·,extends:>,precedes:<
 set list
 
-" Different background color for characters going past the 80 limit
+" Different background color for characters going past the 121 limit
 " Credit: http://stackoverflow.com/a/13731714/949806
 highlight ColorColumn ctermbg=234 guibg=#2c2d27
-let &colorcolumn=join(range(81,999),",")
+let &colorcolumn=join(range(121,999),",")
 
 " Display help in vertical split window
 command -nargs=* -complete=help Help vertical belowright help <args>
