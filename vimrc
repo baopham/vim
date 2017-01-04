@@ -50,7 +50,6 @@ Plugin 'sheerun/vim-polyglot'
 Plugin 'elmcast/elm-vim'
 
 " Tags & coding related
-Plugin 'xolox/vim-easytags'
 Plugin 'xolox/vim-misc'
 Plugin 'majutsushi/tagbar'
 Plugin 'Valloric/YouCompleteMe'
