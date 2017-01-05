@@ -48,6 +48,7 @@ Plugin 'mhinz/vim-signify'
 Plugin 'mattn/sonictemplate-vim'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'elmcast/elm-vim'
+Plugin 'flowtype/vim-flow'
 
 " Tags & coding related
 Plugin 'xolox/vim-misc'
