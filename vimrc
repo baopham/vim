@@ -66,6 +66,7 @@ Plugin 'marijnh/tern_for_vim'
 " Appearance
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'joshdick/onedark.vim'
 
 " Others
 Plugin 'gmarik/sudo-gui.vim'
@@ -108,13 +109,12 @@ set visualbell
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colorscheme
 """"""""""""""""""""""""""""""""""""""""""""""""""""
-colo Sunburst
+colo onedark
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => GUI MacVim
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 if has("gui_running")
-  colo wombat
   set gfn=Monaco\ for\ Powerline:h12
   set guioptions-=T
   set guioptions-=L
@@ -190,7 +190,6 @@ set list
 
 " Different background color for characters going past the 121 limit
 " Credit: http://stackoverflow.com/a/13731714/949806
-highlight ColorColumn ctermbg=234 guibg=#2c2d27
 let &colorcolumn=join(range(121,999),",")
 
 " Display help in vertical split window

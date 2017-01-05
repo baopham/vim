@@ -26,7 +26,6 @@ map ,p "*p
 nnoremap <silent> <Space> :silent noh<Bar>echo<CR>
 
 " Highlight current line
-hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 nnoremap <C-c> :silent set cursorline!<Bar>echo<CR>
 
 " Switch between split windows
