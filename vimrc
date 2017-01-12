@@ -53,7 +53,7 @@ Plugin 'flowtype/vim-flow'
 " Tags & coding related
 Plugin 'xolox/vim-misc'
 Plugin 'majutsushi/tagbar'
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'Shougo/neocomplete.vim'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'lfilho/cosco.vim' " append, remove semi-colon or comma
