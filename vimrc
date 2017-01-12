@@ -53,14 +53,16 @@ Plugin 'flowtype/vim-flow'
 " Tags & coding related
 Plugin 'xolox/vim-misc'
 Plugin 'majutsushi/tagbar'
-Plugin 'Shougo/neocomplete.vim'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'lfilho/cosco.vim' " append, remove semi-colon or comma
 Plugin 'baopham/vim-drupal'
-Plugin 'msanders/snipmate.vim'
 Plugin 'joonty/vdebug'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'neomake/neomake'
+" {{{ Autocomplete
+Plugin 'Shougo/neocomplete.vim'
+Plugin 'Shougo/echodoc.vim'
+" }}}
 
 " Appearance
 Plugin 'vim-airline/vim-airline'
