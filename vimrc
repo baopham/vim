@@ -55,13 +55,11 @@ Plugin 'xolox/vim-misc'
 Plugin 'majutsushi/tagbar'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'lfilho/cosco.vim' " append, remove semi-colon or comma
-Plugin 'baopham/vim-drupal'
 Plugin 'joonty/vdebug'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'neomake/neomake'
 " {{{ Autocomplete
 Plugin 'Shougo/neocomplete.vim'
-Plugin 'Shougo/echodoc.vim'
 " }}}
 
 " Appearance
@@ -75,8 +73,6 @@ Plugin 'thinca/vim-quickrun'
 Plugin 'vim-scripts/YankRing.vim'
 Plugin 'mbbill/undotree'
 Plugin 'szw/vim-maximizer'
-Plugin 'vim-scripts/SyntaxRange'
-Plugin 'vim-scripts/ingo-library'
 
 call vundle#end()
 filetype plugin indent on
