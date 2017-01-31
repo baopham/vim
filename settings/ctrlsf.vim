@@ -1,6 +1,5 @@
 let g:ctrlsf_default_root='project'
 let g:ctrlsf_mapping = {"next": "n", "prev": "N"}
-let g:ctrlsf_ignore_dir = ['flow-typed']
 
 nmap     <C-F>f <Plug>CtrlSFPrompt
 vmap     <C-F>f <Plug>CtrlSFVwordPath
