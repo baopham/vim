@@ -60,6 +60,7 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'neomake/neomake'
 " {{{ Autocomplete
 Plugin 'Shougo/neocomplete.vim'
+Plugin 'davidhalter/jedi-vim'
 " }}}
 
 " Appearance
