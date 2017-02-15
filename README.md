@@ -1,7 +1,9 @@
-### Installation
-
+# Vim
 
 ![screenshot](screenshot.png)
+
+
+### Installation
 
 ```bash
 git clone git://github.com/baopham/vim.git ~/.vim
