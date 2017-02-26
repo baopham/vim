@@ -14,6 +14,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#begin()
 
 Plugin 'gmarik/vundle'
+Plugin 'embear/vim-localvimrc'
 
 " File finder
 Plugin 'ctrlpvim/ctrlp.vim'
