@@ -19,7 +19,6 @@ Plugin 'embear/vim-localvimrc'
 " File finder
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'dyng/ctrlsf.vim'
-Plugin 'amiorin/ctrlp-z'
 Plugin 'scrooloose/nerdtree'
 Plugin 'baopham/vim-nerdtree-unfocus'
 Plugin 'xolox/vim-session' " session manager, dependency: xolox/vim-misc
