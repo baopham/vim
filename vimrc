@@ -17,11 +17,18 @@ Plugin 'gmarik/vundle'
 Plugin 'embear/vim-localvimrc'
 
 " File finder
-Plugin 'ctrlpvim/ctrlp.vim'
+" {{{
+Plugin 'Shougo/vimproc.vim'
+Plugin 'Shougo/unite.vim'
+Plugin 'Shougo/neomru.vim'
+" }}}
 Plugin 'dyng/ctrlsf.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'baopham/vim-nerdtree-unfocus'
-Plugin 'xolox/vim-session' " session manager, dependency: xolox/vim-misc
+" {{{ session manager, dependency: xolox/vim-misc
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-session'
+" }}}
 
 " Text, easier navigation and editing
 Plugin 'ciaranm/detectindent'
@@ -49,13 +56,12 @@ Plugin 'mattn/sonictemplate-vim'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'elmcast/elm-vim'
 Plugin 'flowtype/vim-flow'
+Plugin 'ap/vim-css-color'
 
 " Tags & coding related
-Plugin 'xolox/vim-misc'
 Plugin 'majutsushi/tagbar'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'lfilho/cosco.vim' " append, remove semi-colon or comma
-Plugin 'joonty/vdebug'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'neomake/neomake'
 " {{{ Autocomplete
@@ -71,7 +77,7 @@ Plugin 'joshdick/onedark.vim'
 " Others
 Plugin 'gmarik/sudo-gui.vim'
 Plugin 'thinca/vim-quickrun'
-Plugin 'vim-scripts/YankRing.vim'
+Plugin 'Shougo/neoyank.vim'
 Plugin 'mbbill/undotree'
 Plugin 'szw/vim-maximizer'
 
