@@ -19,7 +19,7 @@ Plugin 'embear/vim-localvimrc'
 " File finder
 " {{{
 Plugin 'Shougo/vimproc.vim'
-Plugin 'Shougo/unite.vim'
+Plugin 'Shougo/denite.nvim'
 Plugin 'Shougo/neomru.vim'
 " }}}
 Plugin 'dyng/ctrlsf.vim'
