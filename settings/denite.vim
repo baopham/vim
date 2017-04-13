@@ -129,13 +129,13 @@ endfor
 
 unlet s:m s:insert_mode_mappings s:normal_mode_mappings
 
-nnoremap <silent> <leader>fr
+nnoremap <silent> <leader>dr
           \ :<C-u>Denite -resume<CR>
-nnoremap <silent> <leader>f  :<C-u>DeniteProjectDir file_mru file_rec<cr>
-nnoremap <silent> <leader>mr  :<C-u>DeniteProjectDir file_mru<cr>
-nnoremap <silent> <leader>g  :<C-u>DeniteProjectDir grep<cr>
-nnoremap <silent> <leader>j  :<C-u>DeniteProjectDir jump<CR>
-nnoremap <silent> <leader>y  :<C-u>Denite register<CR>
+nnoremap <silent> <leader>f  :DeniteProjectDir file_mru file_rec<CR>
+nnoremap <silent> <leader>mr  :DeniteProjectDir file_mru<CR>
+nnoremap <silent> <leader>g  :DeniteProjectDir grep<CR>
+nnoremap <silent> <leader>j  :DeniteProjectDir jump<CR>
+nnoremap <silent> <leader>y  :Denite register<CR>
 
 
 " vim:set et sw=2 cc=80:
