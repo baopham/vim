@@ -21,6 +21,7 @@ Plugin 'embear/vim-localvimrc'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'Shougo/denite.nvim'
 Plugin 'Shougo/neomru.vim'
+Plugin 'Shougo/neoyank.vim'
 " }}}
 Plugin 'dyng/ctrlsf.vim'
 Plugin 'scrooloose/nerdtree'
@@ -77,7 +78,6 @@ Plugin 'joshdick/onedark.vim'
 " Others
 Plugin 'gmarik/sudo-gui.vim'
 Plugin 'thinca/vim-quickrun'
-Plugin 'Shougo/neoyank.vim'
 Plugin 'mbbill/undotree'
 Plugin 'szw/vim-maximizer'
 

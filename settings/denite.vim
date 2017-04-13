@@ -1,18 +1,13 @@
 scriptencoding utf-8
 
-let s:wildignore
-      \ = '*/tmp/*,*.so,*.swp,*.zip,*.class,tags,*.jpg,
-      \*.ttf,*.TTF,*.png,*/target/*,
-      \.git,.svn,.hg,.DS_Store,*.svg'
-
 " denite option
 let s:denite_options = {
       \ 'default' : {
       \ 'winheight' : 15,
       \ 'mode' : 'insert',
       \ 'quit' : 'true',
-      \ 'highlight_matched_char' : 'MoreMsg',
-      \ 'highlight_matched_range' : 'MoreMsg',
+      \ 'highlight_matched_char' : 'WarningMsg',
+      \ 'highlight_matched_range' : 'WarningMsg',
       \ 'direction': 'rightbelow',
       \ 'prompt' : '➭',
       \ }}
@@ -53,7 +48,6 @@ if executable('ag')
   " Change file_rec command.
   call denite#custom#var('file_rec', 'command',
         \ ['ag' , '--nocolor', '--nogroup', '-g', '']
-        \ + s:generate_ignore(s:wildignore, 'ag')
         \ )
 endif
 
@@ -134,6 +128,14 @@ for s:m in s:normal_mode_mappings
 endfor
 
 unlet s:m s:insert_mode_mappings s:normal_mode_mappings
+
+nnoremap <silent> <leader>fr
+          \ :<C-u>Denite -resume<CR>
+nnoremap <silent> <leader>f  :<C-u>DeniteProjectDir file_mru file_rec<cr>
+nnoremap <silent> <leader>mr  :<C-u>DeniteProjectDir file_mru<cr>
+nnoremap <silent> <leader>g  :<C-u>DeniteProjectDir grep<cr>
+nnoremap <silent> <leader>j  :<C-u>DeniteProjectDir jump<CR>
+nnoremap <silent> <leader>y  :<C-u>Denite register<CR>
 
 
 " vim:set et sw=2 cc=80:
