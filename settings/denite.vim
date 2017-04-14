@@ -10,7 +10,7 @@ let s:denite_options = {
       \ 'quit' : 'true',
       \ 'highlight_matched_char' : 'WarningMsg',
       \ 'highlight_matched_range' : 'WarningMsg',
-      \ 'direction': 'rightbelow',
+      \ 'direction': 'botright',
       \ 'prompt' : '➭',
       \ }}
 
@@ -102,9 +102,9 @@ let s:normal_mode_mappings = [
       \   ['<C-n>', '<denite:jump_to_next_source>', 'noremap'],
       \   ['<C-p>', '<denite:jump_to_previous_source>', 'noremap'],
       \   ['gg', '<denite:move_to_first_line>', 'noremap'],
-      \   ['<C-t>', '<denite:do_action:tabopen>', 'noremap'],
-      \   ['<C-v>', '<denite:do_action:vsplit>', 'noremap'],
-      \   ['<C-s>', '<denite:do_action:split>', 'noremap'],
+      \   ['t', '<denite:do_action:tabopen>', 'noremap'],
+      \   ['v', '<denite:do_action:vsplit>', 'noremap'],
+      \   ['s', '<denite:do_action:split>', 'noremap'],
       \   ['q', '<denite:quit>', 'noremap'],
       \   ['r', '<denite:redraw>', 'noremap'],
       \ ]
