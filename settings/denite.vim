@@ -22,22 +22,6 @@ function! s:profile(opts) abort
   endfor
 endfunction
 
-function! s:generate_ignore(ignore, tool) abort
-  let ignore = []
-  if a:tool ==# 'ag'
-    for ig in split(a:ignore,',')
-      call add(ignore, '--ignore')
-      call add(ignore, ig )
-    endfor
-  elseif a:tool ==# 'rg'
-    for ig in split(a:ignore,',')
-      call add(ignore, '-g')
-      call add(ignore, '!' . ig)
-    endfor
-  endif
-  return ignore
-endf
-
 call s:profile(s:denite_options)
 
 " buffer source
