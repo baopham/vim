@@ -10,78 +10,64 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-Plugin 'gmarik/vundle'
-Plugin 'embear/vim-localvimrc'
+Plug 'embear/vim-localvimrc'
 
 " File finder
-" {{{
-Plugin 'Shougo/vimproc.vim'
-Plugin 'Shougo/denite.nvim'
-Plugin 'Shougo/neomru.vim'
-Plugin 'Shougo/neoyank.vim'
-" }}}
-Plugin 'dyng/ctrlsf.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'baopham/vim-nerdtree-unfocus'
-" {{{ session manager, dependency: xolox/vim-misc
-Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-session'
-" }}}
+Plug 'Shougo/vimproc.vim', { 'do': 'make' } | Plug 'Shougo/denite.nvim' | Plug 'Shougo/neomru.vim' | Plug 'Shougo/neoyank.vim'
+Plug 'dyng/ctrlsf.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'baopham/vim-nerdtree-unfocus'
+" Session manager
+Plug 'xolox/vim-misc' | Plug 'xolox/vim-session'
 
 " Text, easier navigation and editing
-Plugin 'ciaranm/detectindent'
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'junegunn/vim-easy-align'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'tpope/vim-surround'
-Plugin 'baopham/trailertrash.vim'
-Plugin 'tpope/vim-repeat'
-Plugin 'xsunsmile/showmarks'
+Plug 'ciaranm/detectindent'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'junegunn/vim-easy-align'
+Plug 'jiangmiao/auto-pairs'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'tpope/vim-surround'
+Plug 'baopham/trailertrash.vim'
+Plug 'tpope/vim-repeat'
+Plug 'xsunsmile/showmarks'
 " Improve search
-Plugin 'osyo-manga/vim-anzu'
+Plug 'osyo-manga/vim-anzu'
 
 " CVS
-Plugin 'tpope/vim-fugitive'
-" {{{ Gist
-Plugin 'mattn/gist-vim'
-Plugin 'mattn/webapi-vim'
-" }}}
-Plugin 'mhinz/vim-signify'
+Plug 'tpope/vim-fugitive'
+Plug 'mattn/webapi-vim' | Plug 'mattn/gist-vim'
+Plug 'mhinz/vim-signify'
 
 " Syntax highlighting & templating
-Plugin 'mattn/sonictemplate-vim'
-Plugin 'sheerun/vim-polyglot'
-Plugin 'elmcast/elm-vim'
-Plugin 'flowtype/vim-flow'
-Plugin 'ap/vim-css-color'
+Plug 'mattn/sonictemplate-vim'
+Plug 'sheerun/vim-polyglot'
+Plug 'elmcast/elm-vim', { 'for': ['elm'] }
+Plug 'flowtype/vim-flow', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'ap/vim-css-color'
 
 " Tags & coding related
-Plugin 'majutsushi/tagbar'
-Plugin 'tomtom/tcomment_vim'
-Plugin 'lfilho/cosco.vim' " append, remove semi-colon or comma
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'neomake/neomake'
-" {{{ Autocomplete
-Plugin 'Shougo/neocomplete.vim'
-Plugin 'davidhalter/jedi-vim'
-" }}}
+Plug 'majutsushi/tagbar'
+Plug 'tomtom/tcomment_vim'
+" Append, remove semi-colon or comma
+Plug 'lfilho/cosco.vim'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'neomake/neomake'
+" Autocomplete
+Plug 'Shougo/neocomplete.vim' | Plug 'davidhalter/jedi-vim', { 'for': ['python'] }
 
 " Appearance
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'joshdick/onedark.vim'
+Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
+Plug 'joshdick/onedark.vim'
 
 " Others
-Plugin 'gmarik/sudo-gui.vim'
-Plugin 'thinca/vim-quickrun'
-Plugin 'mbbill/undotree'
-Plugin 'szw/vim-maximizer'
+Plug 'gmarik/sudo-gui.vim'
+Plug 'thinca/vim-quickrun'
+Plug 'mbbill/undotree'
+Plug 'szw/vim-maximizer'
 
-call vundle#end()
+call plug#end()
 filetype plugin indent on
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""

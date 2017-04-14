@@ -1,5 +1,4 @@
-bundle/*
-!bundle/README.md
+plugged/*
 spell
 session
 sessions
