@@ -53,7 +53,7 @@ Plug 'tomtom/tcomment_vim'
 " Append, remove semi-colon or comma
 Plug 'lfilho/cosco.vim'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'neomake/neomake' | Plug 'benjie/neomake-local-eslint.vim'
+Plug 'neomake/neomake'
 " Autocomplete
 Plug 'Shougo/neocomplete.vim' | Plug 'davidhalter/jedi-vim', { 'for': ['python'] }
 
