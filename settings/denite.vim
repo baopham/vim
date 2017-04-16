@@ -120,7 +120,7 @@ unlet s:m s:insert_mode_mappings s:normal_mode_mappings
 
 nnoremap <silent> <leader>dr
           \ :<C-u>Denite -resume<CR>
-nnoremap <silent> <leader>f  :DeniteProjectDir file_rec<CR>
+nnoremap <silent> <leader>f  :DeniteProjectDir file_mru file_rec<CR>
 nnoremap <silent> <leader>mr :DeniteProjectDir file_mru<CR>
 nnoremap <silent> <leader>g  :DeniteProjectDir grep<CR>
 nnoremap <silent> <leader>j  :DeniteProjectDir jump<CR>
