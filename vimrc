@@ -18,7 +18,7 @@ Plug 'embear/vim-localvimrc'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' } | Plug 'Shougo/denite.nvim' | Plug 'Shougo/neomru.vim' | Plug 'Shougo/neoyank.vim'
 Plug 'dyng/ctrlsf.vim'
 Plug 'scrooloose/nerdtree'
-Plug 'baopham/vim-nerdtree-unfocus'
+Plug 'jistr/vim-nerdtree-tabs'
 " Session manager
 Plug 'xolox/vim-misc' | Plug 'xolox/vim-session'
 
