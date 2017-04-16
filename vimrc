@@ -25,7 +25,7 @@ Plug 'xolox/vim-misc' | Plug 'xolox/vim-session'
 " Text, easier navigation and editing
 Plug 'ciaranm/detectindent'
 Plug 'Lokaltog/vim-easymotion'
-Plug 'junegunn/vim-easy-align'
+
 Plug 'jiangmiao/auto-pairs'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-surround'
