@@ -50,7 +50,7 @@ Plug 'ap/vim-css-color'
 Plug 'majutsushi/tagbar'
 Plug 'tomtom/tcomment_vim'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'neomake/neomake'
+Plug 'neomake/neomake' | Plug 'jaawerth/neomake-local-eslint-first'
 " {{{ Autocomplete
 Plug 'Shougo/neocomplete.vim' | Plug 'davidhalter/jedi-vim', { 'for': ['python'] }
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
