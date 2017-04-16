@@ -25,7 +25,6 @@ Plug 'xolox/vim-misc' | Plug 'xolox/vim-session'
 " Text, easier navigation and editing
 Plug 'ciaranm/detectindent'
 Plug 'Lokaltog/vim-easymotion'
-
 Plug 'jiangmiao/auto-pairs'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-surround'
@@ -50,12 +49,13 @@ Plug 'ap/vim-css-color'
 " Tags & coding related
 Plug 'majutsushi/tagbar'
 Plug 'tomtom/tcomment_vim'
-" Append, remove semi-colon or comma
-Plug 'lfilho/cosco.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'neomake/neomake'
-" Autocomplete
+" {{{ Autocomplete
 Plug 'Shougo/neocomplete.vim' | Plug 'davidhalter/jedi-vim', { 'for': ['python'] }
+Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
+" }}}
+Plug 'moll/vim-node'
 
 " Appearance
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
