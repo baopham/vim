@@ -12,7 +12,7 @@ let NERDTreeMouseMode = 2
 
 " Always show bookmarks
 let NERDTreeShowBookmarks = 1
-let NERDTreeIgnore=['\.pyc$', '\~$']
+let NERDTreeIgnore=['\~$']
 let NERDTreeStatusline = "%{getcwd()}"
 
 " Toggle NERDTree
