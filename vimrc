@@ -15,7 +15,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'embear/vim-localvimrc'
 
 " File finder
-Plug 'Shougo/vimproc.vim', { 'do': 'make' } | Plug 'Shougo/denite.nvim' | Plug 'Shougo/neomru.vim' | Plug 'Shougo/neoyank.vim'
+Plug 'Shougo/vimproc.vim', { 'do': 'make' } | Plug 'nixprime/cpsm', { 'do': 'brew install boost && PY3=ON ./install.sh' } | 
+      \ Plug 'Shougo/denite.nvim' | Plug 'Shougo/neomru.vim' | Plug 'Shougo/neoyank.vim'
 Plug 'dyng/ctrlsf.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
