@@ -10,6 +10,8 @@ let s:denite_options = {
       \ 'quit' : 'true',
       \ 'highlight_matched_char' : 'WarningMsg',
       \ 'highlight_matched_range' : 'WarningMsg',
+      \ 'highlight_mode_insert' : 'PmenuSbar',
+      \ 'highlight_mode_normal' : 'PmenuSbar',
       \ 'direction': 'botright',
       \ 'prompt' : '➭',
       \ }}
@@ -23,6 +25,9 @@ function! s:profile(opts) abort
 endfunction
 
 call s:profile(s:denite_options)
+
+call denite#custom#source(
+	\ 'file_rec', 'matchers', ['matcher_cpsm'])
 
 " buffer source
 call denite#custom#var(
@@ -120,9 +125,8 @@ unlet s:m s:insert_mode_mappings s:normal_mode_mappings
 
 nnoremap <silent> <leader>dr
           \ :<C-u>Denite -resume<CR>
-nnoremap <silent> <leader>f  :DeniteProjectDir file_mru file_rec<CR>
+nnoremap <silent> <C-p>  :DeniteProjectDir file_mru file_rec<CR>
 nnoremap <silent> <leader>mr :DeniteProjectDir file_mru<CR>
-nnoremap <silent> <leader>g  :DeniteProjectDir grep<CR>
 nnoremap <silent> <leader>j  :DeniteProjectDir jump<CR>
 nnoremap <silent> <leader>y  :Denite register<CR>
 
