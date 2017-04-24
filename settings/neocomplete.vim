@@ -1,4 +1,5 @@
 let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_auto_close_preview = 1
 
 " <TAB>: completion.
 imap <expr><TAB> pumvisible() ? "\<C-N>" : "\<TAB>"
