@@ -15,11 +15,9 @@ call plug#begin('~/.vim/plugged')
 Plug 'embear/vim-localvimrc'
 
 " File finder
-Plug 'Shougo/vimproc.vim', { 'do': 'make' } | Plug 'nixprime/cpsm', { 'do': 'brew install boost && PY3=ON ./install.sh' } | 
-      \ Plug 'Shougo/denite.nvim' | Plug 'Shougo/neomru.vim' | Plug 'Shougo/neoyank.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'dyng/ctrlsf.vim'
 Plug 'scrooloose/nerdtree'
-Plug 'jistr/vim-nerdtree-tabs'
 " Session manager
 Plug 'xolox/vim-misc' | Plug 'xolox/vim-session'
 
@@ -29,6 +27,7 @@ Plug 'Lokaltog/vim-easymotion'
 Plug 'jiangmiao/auto-pairs'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-surround'
+Plug 'baopham/vim-nerdtree-unfocus'
 Plug 'baopham/trailertrash.vim'
 Plug 'tpope/vim-repeat'
 Plug 'xsunsmile/showmarks'
@@ -65,6 +64,7 @@ Plug 'joshdick/onedark.vim'
 " Others
 Plug 'gmarik/sudo-gui.vim'
 Plug 'thinca/vim-quickrun'
+Plug 'vim-scripts/YankRing.vim'
 Plug 'mbbill/undotree'
 Plug 'szw/vim-maximizer'
 
