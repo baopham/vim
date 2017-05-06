@@ -5,7 +5,7 @@
 
 ### Requirements
 
-* Vim 8 (with python3), or NeoVim
+* Vim 8
 
 
 ### Installation
