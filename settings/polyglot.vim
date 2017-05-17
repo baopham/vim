@@ -1,1 +1,1 @@
-let g:polyglot_disabled = ['json', 'elm']
+let g:polyglot_disabled = ['json', 'elm', 'go']

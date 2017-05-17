@@ -56,6 +56,7 @@ Plug 'Shougo/neocomplete.vim' | Plug 'davidhalter/jedi-vim', { 'for': ['python']
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 " }}}
 Plug 'moll/vim-node'
+Plug 'fatih/vim-go', { 'do': 'vim +GoInstallBinaries +qall' }
 
 " Appearance
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
