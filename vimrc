@@ -44,7 +44,6 @@ Plug 'mattn/sonictemplate-vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'elmcast/elm-vim', { 'for': ['elm'] }
 Plug 'flowtype/vim-flow', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'ap/vim-css-color'
 
 " Tags & coding related
 Plug 'majutsushi/tagbar'
