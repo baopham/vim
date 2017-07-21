@@ -35,7 +35,7 @@ Plug 'xsunsmile/showmarks'
 Plug 'osyo-manga/vim-anzu'
 
 " CVS
-Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive' | Plug 'gregsexton/gitv', {'on': ['Gitv']}
 Plug 'mattn/webapi-vim' | Plug 'mattn/gist-vim'
 
 " Syntax highlighting & templating
