@@ -37,7 +37,6 @@ Plug 'osyo-manga/vim-anzu'
 " CVS
 Plug 'tpope/vim-fugitive'
 Plug 'mattn/webapi-vim' | Plug 'mattn/gist-vim'
-Plug 'mhinz/vim-signify'
 
 " Syntax highlighting & templating
 Plug 'mattn/sonictemplate-vim'
