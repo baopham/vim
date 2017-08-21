@@ -47,7 +47,7 @@ Plug 'flowtype/vim-flow', { 'for': ['javascript', 'javascript.jsx'] }
 " Tags & coding related
 Plug 'majutsushi/tagbar'
 Plug 'tomtom/tcomment_vim'
-Plug 'editorconfig/editorconfig-vim'
+Plug 'editorconfig/editorconfig-vim', { 'do': 'brew install editorconfig' }
 Plug 'neomake/neomake' | Plug 'jaawerth/neomake-local-eslint-first'
 " {{{ Autocomplete
 Plug 'Shougo/neocomplete.vim' | Plug 'davidhalter/jedi-vim', { 'for': ['python'] }
