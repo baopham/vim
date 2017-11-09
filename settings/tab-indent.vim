@@ -24,6 +24,7 @@ command! -nargs=1 SetTab call s:SetTab(<f-args>)
 function! s:SetTab(width)
   setlocal noexpandtab
   let &tabstop= a:width
+  let &sts = a:width
 endfunction
 
 command! SetLaravelSession call s:SetLaravelSession()
