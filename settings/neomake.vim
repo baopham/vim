@@ -15,3 +15,4 @@ let g:neomake_info_sign = {'text': 'ℹ', 'texthl': 'NeomakeInfoSign'}
 autocmd! BufWritePost *.js,*.jsx silent NeomakeFile
 autocmd! BufWritePost *.py silent NeomakeFile
 autocmd! BufWritePost *.go silent Neomake
+autocmd! BufWritePost *.php silent Neomake
