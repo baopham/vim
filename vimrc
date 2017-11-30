@@ -45,6 +45,7 @@ Plug 'elmcast/elm-vim', { 'for': ['elm'] }
 Plug 'flowtype/vim-flow', { 'for': ['javascript', 'javascript.jsx'] }
 
 " Tags & coding related
+Plug 'python-mode/python-mode', { 'for': ['python'] }
 Plug 'majutsushi/tagbar'
 Plug 'tomtom/tcomment_vim'
 Plug 'editorconfig/editorconfig-vim', { 'do': 'brew install editorconfig' }
