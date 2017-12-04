@@ -41,7 +41,6 @@ Plug 'mattn/webapi-vim' | Plug 'mattn/gist-vim'
 " Syntax highlighting & templating
 Plug 'mattn/sonictemplate-vim'
 Plug 'sheerun/vim-polyglot'
-Plug 'elmcast/elm-vim', { 'for': ['elm'] }
 Plug 'flowtype/vim-flow', { 'for': ['javascript', 'javascript.jsx'] }
 
 " Tags & coding related
