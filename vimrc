@@ -15,11 +15,11 @@ call plug#begin('~/.vim/plugged')
 Plug 'embear/vim-localvimrc'
 
 " File finder
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'dyng/ctrlsf.vim'
+Plug 'dyng/ctrlsf.vim', { 'do': 'brew install the_silver_searcher' }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree'
-" Session manager
-Plug 'xolox/vim-misc' | Plug 'xolox/vim-session'
+Plug 'baopham/vim-rooter'
 
 " Text, easier navigation and editing
 Plug 'ciaranm/detectindent'
