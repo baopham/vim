@@ -19,7 +19,7 @@ Plug 'dyng/ctrlsf.vim', { 'do': 'brew install the_silver_searcher' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree'
-Plug 'baopham/vim-rooter'
+Plug 'airblade/vim-rooter'
 
 " Text, easier navigation and editing
 Plug 'ciaranm/detectindent'
