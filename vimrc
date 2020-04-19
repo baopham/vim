@@ -38,11 +38,6 @@ Plug 'osyo-manga/vim-anzu'
 Plug 'tpope/vim-fugitive' | Plug 'gregsexton/gitv', {'on': ['Gitv']}
 Plug 'mattn/webapi-vim' | Plug 'mattn/gist-vim'
 
-" Syntax highlighting & templating
-Plug 'mattn/sonictemplate-vim'
-Plug 'sheerun/vim-polyglot'
-Plug 'flowtype/vim-flow', { 'for': ['javascript', 'javascript.jsx'] }
-
 " Tags & coding related
 Plug 'python-mode/python-mode', { 'for': ['python'] }
 Plug 'majutsushi/tagbar'
@@ -54,7 +49,12 @@ Plug 'Shougo/neocomplete.vim' | Plug 'davidhalter/jedi-vim', { 'for': ['python']
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 " }}}
 Plug 'moll/vim-node'
-Plug 'fatih/vim-go', { 'do': 'vim +GoInstallBinaries +qall' }
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+" Syntax highlighting & templating
+Plug 'mattn/sonictemplate-vim'
+Plug 'sheerun/vim-polyglot'
+Plug 'flowtype/vim-flow', { 'for': ['javascript', 'javascript.jsx'] }
 
 " Appearance
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
