@@ -45,8 +45,7 @@ Plug 'tomtom/tcomment_vim'
 Plug 'editorconfig/editorconfig-vim', { 'do': 'brew install editorconfig' }
 Plug 'neomake/neomake' | Plug 'jaawerth/neomake-local-eslint-first'
 " {{{ Autocomplete
-Plug 'Shougo/neocomplete.vim' | Plug 'davidhalter/jedi-vim', { 'for': ['python'] }
-Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
+Plug 'ycm-core/YouCompleteMe', { 'do': 'python3 install.py --all' }
 " }}}
 Plug 'moll/vim-node'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }

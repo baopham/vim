@@ -7,7 +7,7 @@
 
 * Vim 8
 
-> Recommended: [Install MacVim app](https://github.com/macvim-dev/macvim/releases) and then `ln -s /Applications/MacVim.app/Contents/bin/mvim /usr/local/bin/mvim && ln -s /usr/local/bin/mvim /usr/local/bin/vim`
+> Recommended: `brew install macvim`
 
 
 ### Installation
